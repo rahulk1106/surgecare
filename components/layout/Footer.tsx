@@ -56,11 +56,6 @@ export default function Footer() {
         <div style={{borderTop: "1px solid #1f2937", paddingTop: "24px"}}>
           <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px", marginBottom: "16px"}}>
             <p style={{fontSize: "13px", color: "#4b5563", margin: 0}}>© 2026 MySurgery. All rights reserved.</p>
-            <div style={{display: "flex", gap: "8px", flexWrap: "wrap"}}>
-              {["NABH Partner", "ISO 9001", "Confidential"].map(b => (
-                <span key={b} style={{fontSize: "11px", border: "1px solid #1f2937", color: "#4b5563", padding: "4px 10px", borderRadius: "4px"}}>{b}</span>
-              ))}
-            </div>
           </div>
           <div style={{display: "flex", gap: "20px", flexWrap: "wrap", marginBottom: "12px"}}>
             <a href="/privacy-policy" style={{fontSize: "13px", color: "#6b7280", textDecoration: "none"}}>Privacy Policy</a>
