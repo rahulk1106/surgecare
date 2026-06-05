@@ -264,6 +264,25 @@ export default function MedicalTourismPage() {
           </div>
         </section>
 
+        {/* NEW GUIDES */}
+        <section style={{padding: '0 0 48px'}}>
+          <h2 style={{fontSize: '22px', fontWeight: 700, color: '#0f1f35', marginBottom: '16px'}}>New Guides</h2>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px'}}>
+            {[
+              { href: '/glp1', icon: '💊', title: 'GLP-1 Weight Loss Drugs in India 2026', desc: 'Ozempic, Wegovy, Mounjaro and 20+ Indian generics — costs from ₹325/week, eligibility, and what patients need to know.' },
+              { href: '/blog/kidney-transplant-india-nigerian-patients', icon: '🫘', title: 'Kidney Transplant in India: Guide for Nigerian Patients', desc: 'Costs, top hospitals, legal requirements, and how to plan your kidney transplant in India from Nigeria.' },
+              { href: '/blog/bypass-surgery-insurance-india-2026', icon: '❤️', title: 'Does Insurance Cover Bypass Surgery in India? (2026)', desc: 'What Indian and international health insurance covers for CABG surgery in 2026 — and how to claim it.' },
+            ].map(g => (
+              <a key={g.href} href={g.href} style={{background: 'white', border: '1px solid #e5e7eb', borderRadius: '14px', padding: '22px', textDecoration: 'none', display: 'block'}}>
+                <span style={{fontSize: '28px', display: 'block', marginBottom: '10px'}}>{g.icon}</span>
+                <h3 style={{fontSize: '15px', fontWeight: 700, color: '#111827', marginBottom: '8px', lineHeight: '1.4'}}>{g.title}</h3>
+                <p style={{fontSize: '13px', color: '#6b7280', lineHeight: '1.65', margin: '0 0 12px'}}>{g.desc}</p>
+                <span style={{fontSize: '13px', color: '#1d4ed8', fontWeight: 600}}>Read guide →</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
         {/* TREATMENTS COST COMPARISON */}
         <section style={{padding: '48px 0'}}>
           <div style={{textAlign: 'center', marginBottom: '40px'}}>

@@ -344,6 +344,8 @@ export default function GLP1Hub() {
             { href: '/glp1/ozempic', label: '🩺 Ozempic Guide', desc: 'India price, dosing, and availability' },
             { href: '/glp1/wegovy', label: '🩺 Wegovy Guide', desc: 'Highest dose semaglutide for weight loss' },
             { href: '/glp1/mounjaro', label: '🩺 Mounjaro Guide', desc: 'Dual GIP+GLP-1 — most powerful' },
+            { href: '/blog/bypass-surgery-insurance-india-2026', label: '📋 Surgery & Insurance India', desc: 'Does insurance cover weight-loss or cardiac surgery in India?' },
+            { href: '/blog/kidney-transplant-india-nigerian-patients', label: '🫘 Kidney Transplant Guide', desc: 'For African patients considering surgery in India' },
           ].map(l => (
             <Link key={l.href} href={l.href} style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '1px solid #e2e8f0', textDecoration: 'none', display: 'block', transition: 'all 0.2s' }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = '#1d4ed8'; (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 16px rgba(29,78,216,0.1)' }}
