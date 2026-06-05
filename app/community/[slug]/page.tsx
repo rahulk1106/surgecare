@@ -48,7 +48,7 @@ const seedQAs: Record<string, any> = {
         "name": "MySurgery Medical Team",
         "designation": "Reviewed by Dr. Shobha Gupta, MD OBG, 26 yrs exp",
         "isDoctor": true,
-        "body": "Yes, completely legal. Under the MTP Act India 2021, only YOUR OWN informed consent is required. Your husband has absolutely no legal right to be informed, and hospitals are legally prohibited from disclosing your medical information to anyone without your explicit consent.\n\nYou can get MTP done without your husband or family knowing. You can also choose a hospital in a different area for additional privacy.\n\nMySurgery handles all MTP consultations with absolute confidentiality. Call us at 8588807050 or WhatsApp \u2014 your privacy is our highest priority.",
+        "body": "Yes, completely legal. Under the MTP Act India 2021, only YOUR OWN informed consent is required. Your husband has absolutely no legal right to be informed, and hospitals are legally prohibited from disclosing your medical information to anyone without your explicit consent.\n\nYou can get MTP done without your husband or family knowing. You can also choose a hospital in a different area for additional privacy.\n\nMySurgery handles all MTP consultations with absolute confidentiality. Call us at 8588967050 or WhatsApp \u2014 your privacy is our highest priority.",
         "city": ""
       },
       {
@@ -239,7 +239,7 @@ const seedQAs: Record<string, any> = {
         "name": "MySurgery Medical Team",
         "designation": "MySurgery Insurance Team",
         "isDoctor": true,
-        "body": "Good news \u2014 Star Health Comprehensive has a 2-year waiting period for joint replacement surgery, so at 3 years you are fully eligible.\n\nCoverage details for Star Comprehensive: Total knee replacement is covered including implant cost, surgeon fee, anaesthesia, OT, and room charges up to your sum insured.\n\nImportant: Check your policy for implant sub-limits. Some Star plans cap implant at Rs 50,000-1,00,000. If your surgeon recommends a premium implant above this limit you pay the difference.\n\nProcess: Ask your surgeon for a pre-surgery estimate. We at MySurgery will submit pre-authorisation to Star Health. Approval typically in 4-8 hours. Then proceed with cashless treatment. Call us at 8588807050 for help with the claim.",
+        "body": "Good news \u2014 Star Health Comprehensive has a 2-year waiting period for joint replacement surgery, so at 3 years you are fully eligible.\n\nCoverage details for Star Comprehensive: Total knee replacement is covered including implant cost, surgeon fee, anaesthesia, OT, and room charges up to your sum insured.\n\nImportant: Check your policy for implant sub-limits. Some Star plans cap implant at Rs 50,000-1,00,000. If your surgeon recommends a premium implant above this limit you pay the difference.\n\nProcess: Ask your surgeon for a pre-surgery estimate. We at MySurgery will submit pre-authorisation to Star Health. Approval typically in 4-8 hours. Then proceed with cashless treatment. Call us at 8588967050 for help with the claim.",
         "city": ""
       },
       {
@@ -474,7 +474,7 @@ export default function QAPage({ params }: { params: { slug: string } }) {
         <p style={{color: '#93c5fd', marginBottom: '24px', fontSize: '14px'}}>Free consultation with specialist doctors. Callback in 30 minutes.</p>
         <div style={{display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap'}}>
           <a href='/contact' style={{background: '#1d4ed8', color: 'white', fontWeight: 600, padding: '11px 22px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>Book Free Consultation</a>
-          <a href='https://wa.me/918588807050' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '11px 22px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>WhatsApp Us</a>
+          <a href='https://wa.me/918588967050' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '11px 22px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>WhatsApp Us</a>
           <a href='/community' style={{background: 'transparent', color: 'white', border: '1px solid rgba(255,255,255,0.3)', padding: '11px 22px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>More Questions</a>
         </div>
       </div>

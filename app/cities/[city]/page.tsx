@@ -32,7 +32,7 @@ export default async function CityPage(props: { params: Promise<{ city: string }
     name: 'MySurgery ' + city.name,
     description: 'MySurgery provides surgical care facilitation in ' + city.name + '.',
     url: 'https://mysurgery.in/cities/' + citySlug,
-    telephone: '+91-8588807050',
+    telephone: '+91-8588967050',
     address: { '@type': 'PostalAddress', addressLocality: city.name, addressRegion: city.state, addressCountry: 'IN' },
     areaServed: { '@type': 'City', name: city.name },
   }
@@ -50,7 +50,7 @@ export default async function CityPage(props: { params: Promise<{ city: string }
           <p style={{fontSize: '17px', color: '#4b5563', marginBottom: '32px'}}>MySurgery connects patients in {city.name}, {city.state} with top surgeons at NABH-accredited hospitals. Free consultation, insurance support, same-day discharge.</p>
           <div style={{display: 'flex', gap: '12px', flexWrap: 'wrap'}}>
             <a href='/contact' style={{background: '#1d4ed8', color: 'white', fontWeight: 600, padding: '13px 24px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Book Free Consultation</a>
-            <a href='https://wa.me/918588807050' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '13px 24px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Us</a>
+            <a href='https://wa.me/918588967050' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '13px 24px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Us</a>
           </div>
         </div>
       </div>
@@ -100,9 +100,9 @@ export default async function CityPage(props: { params: Promise<{ city: string }
         <section style={{marginBottom: '48px'}}>
           <h2 style={{fontSize: '24px', fontWeight: 700, color: '#0f1f35', marginBottom: '20px'}}>Frequently Asked Questions</h2>
           {[
-            ['How to find the best surgeon in ' + city.name + '?', 'MySurgery partners with NABH-accredited hospitals in ' + city.name + '. Call 8588807050 or fill the consultation form and our care coordinator will match you with the best surgeon for your condition.'],
+            ['How to find the best surgeon in ' + city.name + '?', 'MySurgery partners with NABH-accredited hospitals in ' + city.name + '. Call 8588967050 or fill the consultation form and our care coordinator will match you with the best surgeon for your condition.'],
             ['Does MySurgery help with insurance in ' + city.name + '?', 'Yes. MySurgery handles cashless pre-authorisation and claim filing at all partner hospitals in ' + city.name + ' at no extra charge.'],
-            ['Is free consultation available in ' + city.name + '?', 'Yes. MySurgery offers free consultation in ' + city.name + '. Call 8588807050 or WhatsApp us. Callback within 30 minutes.'],
+            ['Is free consultation available in ' + city.name + '?', 'Yes. MySurgery offers free consultation in ' + city.name + '. Call 8588967050 or WhatsApp us. Callback within 30 minutes.'],
           ].map(([q, a], i) => (
             <div key={i} style={{border: '1px solid #e5e7eb', borderRadius: '10px', padding: '18px 20px', marginBottom: '10px'}}>
               <h3 style={{fontSize: '15px', fontWeight: 600, color: '#111827', marginBottom: '8px'}}>{q}</h3>
@@ -116,7 +116,7 @@ export default async function CityPage(props: { params: Promise<{ city: string }
           <p style={{color: '#93c5fd', marginBottom: '28px'}}>Talk to a specialist today. Callback within 30 minutes.</p>
           <div style={{display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap'}}>
             <a href='/contact' style={{background: '#1d4ed8', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Book Free Consultation</a>
-            <a href='https://wa.me/918588807050' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Us</a>
+            <a href='https://wa.me/918588967050' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Us</a>
           </div>
         </div>
       </div>

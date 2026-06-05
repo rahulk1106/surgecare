@@ -173,8 +173,8 @@ export default function CommunityPage() {
             ))}
             <div style={{marginTop: '24px', background: '#f9fafb', borderRadius: '12px', padding: '16px', border: '1px solid #e5e7eb'}}>
               <p style={{fontSize: '13px', fontWeight: 600, color: '#111827', marginBottom: '8px'}}>Need immediate help?</p>
-              <a href="tel:+918588807050" style={{display: 'block', background: '#1d4ed8', color: 'white', textAlign: 'center', padding: '10px', borderRadius: '8px', textDecoration: 'none', fontSize: '13px', fontWeight: 600, marginBottom: '8px'}}>📞 Call 8588807050</a>
-              <a href="https://wa.me/918588807050" target="_blank" rel="noopener noreferrer" style={{display: 'block', background: '#22c55e', color: 'white', textAlign: 'center', padding: '10px', borderRadius: '8px', textDecoration: 'none', fontSize: '13px', fontWeight: 600}}>WhatsApp</a>
+              <a href="tel:+918588967050" style={{display: 'block', background: '#1d4ed8', color: 'white', textAlign: 'center', padding: '10px', borderRadius: '8px', textDecoration: 'none', fontSize: '13px', fontWeight: 600, marginBottom: '8px'}}>📞 Call 8588967050</a>
+              <a href="https://wa.me/918588967050" target="_blank" rel="noopener noreferrer" style={{display: 'block', background: '#22c55e', color: 'white', textAlign: 'center', padding: '10px', borderRadius: '8px', textDecoration: 'none', fontSize: '13px', fontWeight: 600}}>WhatsApp</a>
             </div>
           </div>
 

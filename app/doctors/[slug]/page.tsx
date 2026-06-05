@@ -55,7 +55,7 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
     mainEntity: [
       { '@type': 'Question', name: 'Where does ' + d.name + ' practice?', acceptedAnswer: { '@type': 'Answer', text: d.name + ' practices at ' + d.hospital + ' in ' + d.city + '.' } },
       { '@type': 'Question', name: 'What is ' + d.name + "'s experience?", acceptedAnswer: { '@type': 'Answer', text: d.name + ' has ' + d.experience + ' years of experience in ' + d.speciality + '.' } },
-      { '@type': 'Question', name: 'How to book an appointment with ' + d.name + '?', acceptedAnswer: { '@type': 'Answer', text: 'You can book a free consultation with ' + d.name + ' through MySurgery. Call 8588807050 or fill the consultation form.' } },
+      { '@type': 'Question', name: 'How to book an appointment with ' + d.name + '?', acceptedAnswer: { '@type': 'Answer', text: 'You can book a free consultation with ' + d.name + ' through MySurgery. Call 8588967050 or fill the consultation form.' } },
     ],
   }
 
@@ -90,8 +90,8 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
               <p style={{fontSize: '14px', color: '#6b7280', margin: '0 0 4px'}}>Currently at</p>
               <p style={{fontSize: '16px', fontWeight: 600, color: '#111827', margin: '0 0 16px'}}>🏥 {d.hospital}</p>
               <a href='/contact' style={{display: 'block', background: '#1d4ed8', color: 'white', textAlign: 'center', fontWeight: 600, padding: '13px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px', marginBottom: '10px'}}>Book Free Consultation</a>
-              <a href='https://wa.me/918588807050' target='_blank' rel='noopener noreferrer' style={{display: 'block', background: '#22c55e', color: 'white', textAlign: 'center', fontWeight: 600, padding: '13px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px', marginBottom: '10px'}}>WhatsApp Us</a>
-              <a href='tel:+918588807050' style={{display: 'block', background: 'white', border: '1px solid #e5e7eb', color: '#374151', textAlign: 'center', fontWeight: 500, padding: '11px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>📞 8588807050</a>
+              <a href='https://wa.me/918588967050' target='_blank' rel='noopener noreferrer' style={{display: 'block', background: '#22c55e', color: 'white', textAlign: 'center', fontWeight: 600, padding: '13px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px', marginBottom: '10px'}}>WhatsApp Us</a>
+              <a href='tel:+918588967050' style={{display: 'block', background: 'white', border: '1px solid #e5e7eb', color: '#374151', textAlign: 'center', fontWeight: 500, padding: '11px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>📞 8588967050</a>
               {!d.claimed && (
                 <a href={'/doctors/claim/' + slug} style={{display: 'block', textAlign: 'center', marginTop: '12px', fontSize: '12px', color: '#1d4ed8', textDecoration: 'none'}}>Are you {d.name}? Claim this profile →</a>
               )}
@@ -138,7 +138,7 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
               {[
                 ['Where does ' + d.name + ' practice?', d.name + ' practices at ' + d.hospital + ' in ' + d.city + '.'],
                 ['How many years of experience does ' + d.name + ' have?', d.name + ' has ' + d.experience + ' years of experience in ' + d.speciality + '.'],
-                ['How to book an appointment with ' + d.name + '?', 'Call MySurgery at 8588807050 or fill the free consultation form. We will connect you with ' + d.name + ' at ' + d.hospital + '.'],
+                ['How to book an appointment with ' + d.name + '?', 'Call MySurgery at 8588967050 or fill the free consultation form. We will connect you with ' + d.name + ' at ' + d.hospital + '.'],
                 ['Does ' + d.name + ' offer teleconsultation?', 'Yes. MySurgery facilitates teleconsultation with ' + d.name + '. Fill the consultation form and our care coordinator will arrange it.'],
               ].map(([q, a], i) => (
                 <div key={i} style={{border: '1px solid #e5e7eb', borderRadius: '10px', padding: '18px 20px', marginBottom: '10px'}}>
@@ -158,8 +158,8 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
             <div style={{background: 'white', border: '1px solid #e5e7eb', borderRadius: '16px', padding: '20px', marginBottom: '16px'}}>
               <p style={{fontSize: '13px', fontWeight: 600, color: '#374151', marginBottom: '12px'}}>Book via MySurgery</p>
               <a href='/contact' style={{display: 'block', background: '#1d4ed8', color: 'white', textAlign: 'center', fontWeight: 600, padding: '12px', borderRadius: '8px', textDecoration: 'none', fontSize: '14px', marginBottom: '8px'}}>Free Consultation</a>
-              <a href='https://wa.me/918588807050' target='_blank' rel='noopener noreferrer' style={{display: 'block', background: '#22c55e', color: 'white', textAlign: 'center', fontWeight: 600, padding: '12px', borderRadius: '8px', textDecoration: 'none', fontSize: '14px', marginBottom: '8px'}}>WhatsApp</a>
-              <a href='tel:+918588807050' style={{display: 'block', background: 'white', border: '1px solid #e5e7eb', color: '#374151', textAlign: 'center', padding: '10px', borderRadius: '8px', textDecoration: 'none', fontSize: '14px'}}>📞 8588807050</a>
+              <a href='https://wa.me/918588967050' target='_blank' rel='noopener noreferrer' style={{display: 'block', background: '#22c55e', color: 'white', textAlign: 'center', fontWeight: 600, padding: '12px', borderRadius: '8px', textDecoration: 'none', fontSize: '14px', marginBottom: '8px'}}>WhatsApp</a>
+              <a href='tel:+918588967050' style={{display: 'block', background: 'white', border: '1px solid #e5e7eb', color: '#374151', textAlign: 'center', padding: '10px', borderRadius: '8px', textDecoration: 'none', fontSize: '14px'}}>📞 8588967050</a>
             </div>
             <div style={{background: '#f9fafb', borderRadius: '12px', padding: '16px'}}>
               {[['10,000+', 'Patients helped'], ['30 min', 'Callback time'], ['Free', 'Consultation']].map(([n, l]) => (

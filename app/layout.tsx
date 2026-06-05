@@ -9,17 +9,17 @@ import Footer from '@/components/layout/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mysurgery.in'),
+  metadataBase: new URL('https://www.mysurgery.in'),
   title: {
-    default: 'MySurgery — Trusted Surgery Facilitation in Delhi-NCR',
+    default: 'MySurgery — Find Best Surgeons & Surgery Cost in India',
     template: '%s | MySurgery',
   },
-  description: 'MySurgery connects patients with expert surgeons and top hospitals in Delhi, Gurugram, Noida and Faridabad. Free consultation, insurance support, same-day discharge.',
+  description: 'MySurgery connects patients with top surgeons and NABH-accredited hospitals across India. Free consultation, insurance support, same-day discharge.',
   keywords: [
-    'surgery facilitation Delhi',
+    'surgery facilitation India',
     'piles laser treatment Gurugram',
     'hernia surgery Noida',
-    'knee replacement Delhi NCR',
+    'knee replacement india',
     'free surgical consultation',
   ],
   openGraph: { type: 'website', locale: 'en_IN', siteName: 'MySurgery' },
@@ -31,9 +31,9 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': ['MedicalBusiness', 'LocalBusiness'],
   name: 'MySurgery',
-  description: 'MySurgery is a surgical care facilitation company connecting patients with expert surgeons and NABH-accredited hospitals across Delhi-NCR for piles, hernia, knee replacement, cataract and gallbladder surgery.',
-  url: 'https://mysurgery.in',
-  telephone: '+91-8588807050',
+  description: 'MySurgery connects patients with top surgeons and NABH-accredited hospitals across India for piles, hernia, knee replacement, MTP, circumcision, cataract and more. Free consultation, insurance support, same-day discharge.',
+  url: 'https://www.mysurgery.in',
+  telephone: '+91-8588967050',
   email: 'info.mysurgery@gmail.com',
   address: {
     '@type': 'PostalAddress',

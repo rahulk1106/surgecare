@@ -32,7 +32,7 @@ export default function CircumcisionPage() {
           </div>
           <div style={{display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '24px'}}>
             <a href='/contact' style={{background: '#1d4ed8', color: 'white', fontWeight: 700, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Book Confidential Consultation</a>
-            <a href='https://wa.me/918588807050?text=Hi+I+want+to+know+about+laser+circumcision' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Us</a>
+            <a href='https://wa.me/918588967050?text=Hi+I+want+to+know+about+laser+circumcision' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Us</a>
           </div>
           <div style={{display: 'flex', gap: '24px', flexWrap: 'wrap'}}>
             {['No stitches', 'Same-day discharge', '100% confidential', 'Local anaesthesia'].map(t => (
@@ -154,7 +154,7 @@ export default function CircumcisionPage() {
           <p style={{color: '#93c5fd', marginBottom: '32px', fontSize: '16px'}}>Free consultation · Experienced urologists · 20+ cities · Same-day appointments available</p>
           <div style={{display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap'}}>
             <a href='/contact' style={{background: '#1d4ed8', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Book Free Consultation</a>
-            <a href='https://wa.me/918588807050?text=Hi+I+want+to+know+about+laser+circumcision' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Us</a>
+            <a href='https://wa.me/918588967050?text=Hi+I+want+to+know+about+laser+circumcision' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Us</a>
           </div>
         </div>
       </div>

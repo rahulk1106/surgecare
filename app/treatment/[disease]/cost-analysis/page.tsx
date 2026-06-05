@@ -156,7 +156,7 @@ export default async function CostAnalysisPage(props: { params: Promise<{ diseas
           <p style={{color: '#93c5fd', marginBottom: '28px', fontSize: '15px'}}>Free consultation. Transparent pricing. Insurance handled. No surprises.</p>
           <div style={{display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap'}}>
             <a href='/contact' style={{background: '#1d4ed8', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Get Free Cost Estimate</a>
-            <a href='https://wa.me/918588807050' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Us</a>
+            <a href='https://wa.me/918588967050' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Us</a>
           </div>
         </div>
       </div>

@@ -25,9 +25,9 @@ export default function ClaimPage() {
         <p style={{fontSize: '14px', color: '#6b7280', marginBottom: '20px'}}>Send us an email or WhatsApp with your name, registration number, and hospital. We will verify and transfer the profile to you within 24 hours.</p>
         <div style={{display: 'flex', flexDirection: 'column', gap: '12px'}}>
           <a href='mailto:info.mysurgery@gmail.com?subject=Profile Claim Request' style={{display: 'block', background: '#1d4ed8', color: 'white', textAlign: 'center', fontWeight: 600, padding: '14px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Email Us to Claim Profile</a>
-          <a href='https://wa.me/918588807050?text=Hi+I+want+to+claim+my+doctor+profile+on+MySurgery' target='_blank' rel='noopener noreferrer' style={{display: 'block', background: '#22c55e', color: 'white', textAlign: 'center', fontWeight: 600, padding: '14px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp to Claim Profile</a>
+          <a href='https://wa.me/918588967050?text=Hi+I+want+to+claim+my+doctor+profile+on+MySurgery' target='_blank' rel='noopener noreferrer' style={{display: 'block', background: '#22c55e', color: 'white', textAlign: 'center', fontWeight: 600, padding: '14px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp to Claim Profile</a>
         </div>
-        <p style={{fontSize: '12px', color: '#9ca3af', textAlign: 'center', marginTop: '16px'}}>Or call us at 8588807050 · Available 9am – 9pm</p>
+        <p style={{fontSize: '12px', color: '#9ca3af', textAlign: 'center', marginTop: '16px'}}>Or call us at 8588967050 · Available 9am – 9pm</p>
       </div>
     </div>
   )

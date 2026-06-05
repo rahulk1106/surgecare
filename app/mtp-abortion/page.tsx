@@ -45,7 +45,7 @@ export default function MTPPage() {
           <p style={{fontSize: '18px', color: '#4b5563', lineHeight: '1.7', marginBottom: '28px', maxWidth: '680px'}}>MySurgery connects you with registered female gynaecologists for confidential MTP across 20+ cities. Medical abortion pills up to 9 weeks. Surgical termination up to 20 weeks.</p>
           <div style={{display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '24px'}}>
             <a href='/contact' style={{background: '#1d4ed8', color: 'white', fontWeight: 700, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Speak to a Female Doctor — Free</a>
-            <a href='https://wa.me/918588807050?text=Hi+I+need+confidential+MTP+consultation' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Confidentially</a>
+            <a href='https://wa.me/918588967050?text=Hi+I+need+confidential+MTP+consultation' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Confidentially</a>
           </div>
           <div style={{display: 'flex', gap: '24px', flexWrap: 'wrap'}}>
             {['Free confidential consultation', 'Female gynaecologists available', 'No family permission needed', 'Same-day procedures available'].map(t => (
@@ -173,7 +173,7 @@ export default function MTPPage() {
             ['What is the maximum weeks for abortion in India?', 'Up to 20 weeks for any woman with one doctor approval. Up to 24 weeks for survivors of assault, minors, women with disabilities, change in marital status, and foetal abnormalities. Beyond 24 weeks only for severe foetal abnormalities with Medical Board approval.'],
             ['Will it affect my future fertility?', 'No. A properly performed abortion by a qualified doctor does not affect your fertility. You can conceive again when you choose to. Fertility returns as soon as your menstrual cycle resumes.'],
             ['Can I get abortion pills online in India?', 'No. Taking abortion pills without medical supervision is dangerous and illegal. Pills should only be taken after an ultrasound confirms gestational age and rules out ectopic pregnancy. MySurgery connects you with registered doctors who prescribe and supervise medical abortion safely.'],
-            ['How soon can I get an appointment?', 'MySurgery offers same-day or next-day appointments in all major cities. Call 8588807050 or WhatsApp us for the fastest response.'],
+            ['How soon can I get an appointment?', 'MySurgery offers same-day or next-day appointments in all major cities. Call 8588967050 or WhatsApp us for the fastest response.'],
           ].map(([q, a], i) => (
             <div key={i} style={{border: '1px solid #e5e7eb', borderRadius: '10px', padding: '18px 20px', marginBottom: '10px'}}>
               <h3 style={{fontSize: '15px', fontWeight: 600, color: '#111827', marginBottom: '8px'}}>{q}</h3>
@@ -188,7 +188,7 @@ export default function MTPPage() {
           <p style={{color: '#93c5fd', marginBottom: '32px', fontSize: '16px', maxWidth: '500px', margin: '0 auto 32px'}}>Speak to a female doctor today. Free, confidential, and non-judgmental. We are here to help you make the right decision for you.</p>
           <div style={{display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap'}}>
             <a href='/contact' style={{background: 'white', color: '#1d4ed8', fontWeight: 700, padding: '15px 32px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Speak to a Female Doctor — Free</a>
-            <a href='https://wa.me/918588807050?text=Hi+I+need+confidential+MTP+consultation' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '15px 32px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Confidentially</a>
+            <a href='https://wa.me/918588967050?text=Hi+I+need+confidential+MTP+consultation' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '15px 32px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Confidentially</a>
           </div>
           <p style={{color: '#64748b', fontSize: '13px', marginTop: '20px'}}>Available 9am – 9pm · All calls confidential · Female doctors available</p>
         </div>

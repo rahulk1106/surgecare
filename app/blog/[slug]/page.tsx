@@ -148,7 +148,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
           <p style={{color: '#93c5fd', marginBottom: '24px', fontSize: '15px'}}>Free consultation. Expert doctors. Callback in 30 minutes.</p>
           <div style={{display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap'}}>
             <a href="/contact" style={{background: 'white', color: '#1d4ed8', fontWeight: 700, padding: '13px 24px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>Book Free Consultation</a>
-            <a href="https://wa.me/918588807050" target="_blank" rel="noopener noreferrer" style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '13px 24px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>WhatsApp Us</a>
+            <a href="https://wa.me/918588967050" target="_blank" rel="noopener noreferrer" style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '13px 24px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>WhatsApp Us</a>
           </div>
         </div>
 

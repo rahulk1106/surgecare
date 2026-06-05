@@ -23,8 +23,8 @@ export async function generateMetadata(props: { params: Promise<{ disease: strin
   const city = getCityBySlug(citySlug)
   if (!disease || !city) return {}
   return {
-    title: disease.name + " in " + city.name + ": " + disease.costRange + " · Cashless Insurance | MySurgery",
-    description: disease.name + " in " + city.name + " costs " + disease.costRange + ". " + disease.stayDuration + ". Insurance cashless available. Free expert consultation — callback in 30 mins. Book now.",
+    title: disease.name + " Surgery Cost in " + city.name + " 2026 | Best Hospitals & Doctors | MySurgery",
+    description: disease.name + " surgery cost in " + city.name + " is " + disease.costRange + ". Insurance cashless at top NABH hospitals. Same-day discharge available. Free expert consultation — callback in 30 mins.",
     alternates: { canonical: "/treatment/" + slug + "/cost-" + citySlug },
   }
 }
@@ -70,7 +70,7 @@ export default async function CostCityPage(props: { params: Promise<{ disease: s
               <p style={{fontSize: "16px", color: "#4b5563", lineHeight: "1.7", marginBottom: "24px"}}>{d.name} surgery in {c.name} costs {d.costRange}. The exact cost depends on hospital, surgeon experience, and anaesthesia type. MySurgery provides transparent pricing with no hidden charges.</p>
               <div style={{display: "flex", gap: "12px", flexWrap: "wrap"}}>
                 <a href="/contact" style={{background: "#1d4ed8", color: "white", fontWeight: 600, padding: "13px 24px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>Get Exact Cost Estimate</a>
-                <a href="https://wa.me/918588807050" target="_blank" rel="noopener noreferrer" style={{background: "#22c55e", color: "white", fontWeight: 600, padding: "13px 24px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>WhatsApp Us</a>
+                <a href="https://wa.me/918588967050" target="_blank" rel="noopener noreferrer" style={{background: "#22c55e", color: "white", fontWeight: 600, padding: "13px 24px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>WhatsApp Us</a>
               </div>
             </div>
             <div style={{background: "white", borderRadius: "16px", padding: "24px", boxShadow: "0 8px 32px rgba(0,0,0,0.08)"}}>
@@ -137,7 +137,7 @@ export default async function CostCityPage(props: { params: Promise<{ disease: s
           <p style={{color: "#93c5fd", marginBottom: "32px", fontSize: "16px"}}>Free consultation. Transparent pricing. Insurance handled. Callback in 30 minutes.</p>
           <div style={{display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap"}}>
             <a href="/contact" style={{background: "#1d4ed8", color: "white", fontWeight: 600, padding: "14px 28px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>Book Free Consultation</a>
-            <a href="https://wa.me/918588807050" target="_blank" rel="noopener noreferrer" style={{background: "#22c55e", color: "white", fontWeight: 600, padding: "14px 28px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>WhatsApp Us</a>
+            <a href="https://wa.me/918588967050" target="_blank" rel="noopener noreferrer" style={{background: "#22c55e", color: "white", fontWeight: 600, padding: "14px 28px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>WhatsApp Us</a>
           </div>
         </div>
       </div>

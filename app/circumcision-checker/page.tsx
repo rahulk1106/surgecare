@@ -189,7 +189,7 @@ export default function CircumcisionChecker() {
               </div>
             )}
             <div style={{display: 'flex', gap: '10px', marginTop: '12px'}}>
-              <a href="https://wa.me/918588807050?text=Hi+I+just+completed+circumcision+assessment" target="_blank" rel="noopener noreferrer" style={{flex: 1, textAlign: 'center', background: '#22c55e', color: 'white', padding: '11px', borderRadius: '8px', textDecoration: 'none', fontSize: '13px', fontWeight: 600}}>WhatsApp Confidentially</a>
+              <a href="https://wa.me/918588967050?text=Hi+I+just+completed+circumcision+assessment" target="_blank" rel="noopener noreferrer" style={{flex: 1, textAlign: 'center', background: '#22c55e', color: 'white', padding: '11px', borderRadius: '8px', textDecoration: 'none', fontSize: '13px', fontWeight: 600}}>WhatsApp Confidentially</a>
               <Link href="/contact" style={{flex: 1, textAlign: 'center', background: '#f9fafb', color: '#374151', padding: '11px', borderRadius: '8px', textDecoration: 'none', fontSize: '13px', border: '1px solid #e5e7eb'}}>Book Consultation</Link>
             </div>
           </div>

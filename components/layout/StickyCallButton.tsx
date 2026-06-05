@@ -21,7 +21,7 @@ export default function StickyCallButton() {
       >
         {/* Call Button */}
         <a
-          href="tel:+918588807050"
+          href="tel:+918588967050"
           style={{
             flex: 1,
             background: "white",
@@ -41,7 +41,7 @@ export default function StickyCallButton() {
 
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/918588807050?text=Hi%2C%20I%20want%20a%20free%20surgery%20consultation"
+          href="https://wa.me/918588967050?text=Hi%2C%20I%20want%20a%20free%20surgery%20consultation"
           target="_blank"
           rel="noopener noreferrer"
           style={{

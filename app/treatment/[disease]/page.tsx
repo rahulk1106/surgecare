@@ -14,8 +14,8 @@ export async function generateMetadata(props: { params: Promise<{ disease: strin
   if (!disease) return {}
   const cityList = "Delhi, Gurugram, Noida, Mumbai, Bangalore & more"
   return {
-    title: disease.name + " Surgery: " + disease.costRange + " · " + disease.stayDuration + " | MySurgery",
-    description: disease.name + " costs " + disease.costRange + " in India. " + disease.tagline + " Free consultation, callback in 30 mins. Available in " + cityList + ".",
+    title: disease.name + " Surgery in India | Cost 2026, Best Doctors & Hospitals | MySurgery",
+    description: disease.name + " surgery in India costs " + disease.costRange + ". " + disease.tagline + " NABH-accredited hospitals, insurance cashless, free expert consultation. Available in Delhi, Mumbai, Bangalore & 15+ cities.",
     keywords: disease.seoKeywords.join(", "),
     alternates: { canonical: "/treatment/" + slug },
   }
@@ -38,26 +38,60 @@ export default async function DiseasePage(props: { params: Promise<{ disease: st
 
   const d = disease!
 
+  const reviewedDate = "June 2026"
+  const reviewedDateISO = "2026-06-01"
+
+  const medicalProcedureSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    name: d.name + " Surgery",
+    description: d.description,
+    procedureType: "https://schema.org/SurgicalProcedure",
+    followup: d.recovery,
+    preparation: "Free consultation with MySurgery. Share medical records for a personalised treatment plan.",
+    howPerformed: d.treatments.join(". "),
+    url: "https://www.mysurgery.in/treatment/" + slug,
+    dateModified: reviewedDateISO,
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mysurgery.in" },
+      { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.mysurgery.in/treatments" },
+      { "@type": "ListItem", position: 3, name: d.name, item: "https://www.mysurgery.in/treatment/" + slug },
+    ],
+  }
+
   return (
     <div style={{fontFamily: "system-ui, -apple-system, sans-serif"}}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div style={{background: "linear-gradient(135deg, #f0f7ff 0%, #e8f1fb 100%)", padding: "60px 24px 48px"}}>
         <div style={{maxWidth: "1100px", margin: "0 auto"}}>
-          <div style={{fontSize: "13px", color: "#6b7280", marginBottom: "12px"}}>
-            <a href="/" style={{color: "#6b7280", textDecoration: "none"}}>Home</a> &rsaquo; <a href={"/treatment/" + slug} style={{color: "#1d4ed8", textDecoration: "none"}}>{d.name}</a>
+          <div style={{display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "8px", marginBottom: "12px"}}>
+            <div style={{fontSize: "13px", color: "#6b7280"}}>
+              <a href="/" style={{color: "#6b7280", textDecoration: "none"}}>Home</a> &rsaquo; <a href={"/treatment/" + slug} style={{color: "#1d4ed8", textDecoration: "none"}}>{d.name}</a>
+            </div>
+            <div style={{fontSize: "12px", color: "#6b7280", display: "flex", alignItems: "center", gap: "5px"}}>
+              <span style={{color: "#22c55e"}}>✓</span>
+              <span>Medically reviewed &amp; updated: <strong>{reviewedDate}</strong></span>
+            </div>
           </div>
           <div style={{display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "48px", alignItems: "center"}}>
             <div>
               <div style={{display: "inline-block", background: "#eff6ff", color: "#1d4ed8", fontSize: "12px", fontWeight: 600, padding: "4px 12px", borderRadius: "20px", marginBottom: "16px", textTransform: "uppercase", letterSpacing: "0.06em"}}>{d.category}</div>
-              <h1 style={{fontSize: "40px", fontWeight: 700, color: "#0f1f35", lineHeight: "1.2", marginBottom: "16px"}}>{d.name} Treatment</h1>
+              <h1 style={{fontSize: "40px", fontWeight: 700, color: "#0f1f35", lineHeight: "1.2", marginBottom: "16px"}}>{d.name} Surgery in India — Cost, Doctors &amp; Hospitals</h1>
               <p style={{fontSize: "18px", color: "#4b5563", lineHeight: "1.7", marginBottom: "24px"}}>{d.tagline}</p>
               <div style={{background: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "12px", padding: "16px", marginBottom: "24px"}}>
                 <p style={{color: "#1e3a8a", fontWeight: 500, margin: 0}}>{d.description}</p>
               </div>
               <div style={{display: "flex", gap: "12px", flexWrap: "wrap", marginBottom: "20px"}}>
                 <a href="/contact" style={{background: "#1d4ed8", color: "white", fontWeight: 600, padding: "13px 24px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>Book Free Consultation</a>
-                <a href="tel:+918588807050" style={{background: "white", color: "#1d4ed8", border: "1.5px solid #1d4ed8", fontWeight: 600, padding: "12px 24px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>Call 8588807050</a>
+                <a href="tel:+918588967050" style={{background: "white", color: "#1d4ed8", border: "1.5px solid #1d4ed8", fontWeight: 600, padding: "12px 24px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>Call 8588967050</a>
               </div>
               <div style={{display: "flex", gap: "20px", flexWrap: "wrap"}}>
                 {["No hidden fees", d.insuranceCovered ? "Insurance covered" : "Transparent pricing", "Same-day discharge"].map(item => (
@@ -200,12 +234,23 @@ export default async function DiseasePage(props: { params: Promise<{ disease: st
           </div>
 
           <div style={{position: "sticky", top: "80px"}}>
+            {d.relatedDiseases && d.relatedDiseases.length > 0 && (
+              <div style={{background: "white", border: "1px solid #e5e7eb", borderRadius: "16px", padding: "20px", marginBottom: "16px"}}>
+                <p style={{fontSize: "13px", fontWeight: 600, color: "#374151", marginBottom: "12px"}}>Related Treatments</p>
+                {d.relatedDiseases.map(relSlug => (
+                  <a key={relSlug} href={"/treatment/" + relSlug} style={{display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 0", borderBottom: "1px solid #f0f0f0", textDecoration: "none"}}>
+                    <span style={{fontSize: "14px", color: "#374151", textTransform: "capitalize"}}>{relSlug.replace(/-/g, " ")}</span>
+                    <span style={{fontSize: "12px", color: "#1d4ed8"}}>Learn more →</span>
+                  </a>
+                ))}
+              </div>
+            )}
             <div style={{background: "white", border: "1px solid #e5e7eb", borderRadius: "16px", padding: "24px", marginBottom: "16px", boxShadow: "0 4px 16px rgba(0,0,0,0.06)"}}>
               <p style={{fontSize: "11px", fontWeight: 600, color: "#1d4ed8", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "4px"}}>Free Consultation</p>
               <h3 style={{fontSize: "17px", fontWeight: 700, color: "#111827", marginBottom: "16px"}}>Talk to an expert today</h3>
               <a href="/contact" style={{display: "block", background: "#1d4ed8", color: "white", textAlign: "center", fontWeight: 600, padding: "13px", borderRadius: "10px", textDecoration: "none", fontSize: "14px", marginBottom: "10px"}}>Book Free Consultation</a>
-              <a href="https://wa.me/918588807050" target="_blank" rel="noopener noreferrer" style={{display: "block", background: "#22c55e", color: "white", textAlign: "center", fontWeight: 600, padding: "13px", borderRadius: "10px", textDecoration: "none", fontSize: "14px", marginBottom: "10px"}}>WhatsApp Us</a>
-              <a href="tel:+918588807050" style={{display: "block", background: "white", border: "1px solid #e5e7eb", color: "#374151", textAlign: "center", fontWeight: 500, padding: "11px", borderRadius: "10px", textDecoration: "none", fontSize: "14px"}}>Call 8588807050</a>
+              <a href="https://wa.me/918588967050" target="_blank" rel="noopener noreferrer" style={{display: "block", background: "#22c55e", color: "white", textAlign: "center", fontWeight: 600, padding: "13px", borderRadius: "10px", textDecoration: "none", fontSize: "14px", marginBottom: "10px"}}>WhatsApp Us</a>
+              <a href="tel:+918588967050" style={{display: "block", background: "white", border: "1px solid #e5e7eb", color: "#374151", textAlign: "center", fontWeight: 500, padding: "11px", borderRadius: "10px", textDecoration: "none", fontSize: "14px"}}>Call 8588967050</a>
               <p style={{fontSize: "11px", color: "#9ca3af", textAlign: "center", marginTop: "10px", marginBottom: 0}}>Confidential · Callback in 30 mins</p>
             </div>
             <div style={{background: "white", border: "1px solid #e5e7eb", borderRadius: "16px", padding: "20px", marginBottom: "16px"}}>

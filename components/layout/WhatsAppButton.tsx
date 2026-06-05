@@ -2,7 +2,7 @@
 import React from "react"
 
 export default function WhatsAppButton() {
-  const url = "https://wa.me/918588807050?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%20surgery%20consultation"
+  const url = "https://wa.me/918588967050?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%20surgery%20consultation"
   return React.createElement(
     "div",
     { className: "fixed bottom-6 right-6 z-50" },

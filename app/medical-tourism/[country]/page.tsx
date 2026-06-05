@@ -97,7 +97,7 @@ export default async function CountryPage(props: { params: Promise<{ country: st
             <a href='/contact' style={{background: 'white', color: '#1d4ed8', fontWeight: 700, padding: '13px 24px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>
               Get Free Treatment Plan
             </a>
-            <a href={'https://wa.me/918588807050?text=' + whatsappMsg} target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '13px 24px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>
+            <a href={'https://wa.me/918588967050?text=' + whatsappMsg} target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '13px 24px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px'}}>
               WhatsApp Us
             </a>
           </div>
@@ -164,7 +164,7 @@ export default async function CountryPage(props: { params: Promise<{ country: st
           </h2>
           {[
             ['Is surgery in India safe for ' + c.name + ' patients?', 'Yes. India has 30+ JCI-accredited hospitals meeting the same international standards as hospitals in the UAE, UK, and USA. Over 500,000 international patients travel to India for treatment every year with an excellent safety record.'],
-            ['How do I get started?', 'Send your medical reports to MySurgery via WhatsApp (+91 8588807050) or email (info.mysurgery@gmail.com). We will prepare a free treatment plan and cost estimate within 48 hours.'],
+            ['How do I get started?', 'Send your medical reports to MySurgery via WhatsApp (+91 8588967050) or email (info.mysurgery@gmail.com). We will prepare a free treatment plan and cost estimate within 48 hours.'],
             ['How long will I need to stay in India?', 'Duration depends on the procedure. Knee or hip replacement: 10-14 days. Bypass surgery: 14-21 days. Kidney transplant: 4-6 weeks. Cancer treatment: depends on protocol. We advise on minimum required stay.'],
             ['Will I have language support in India?', 'Yes. Major hospitals have international patient departments with English-speaking staff and coordinators. MySurgery communicates in English and can arrange Arabic-language support for Middle East patients.'],
             ['Can MySurgery help with the Medical Visa invitation letter?', 'Yes. MySurgery provides the official hospital invitation letter required for your Medical Visa application at no charge.'],
@@ -187,7 +187,7 @@ export default async function CountryPage(props: { params: Promise<{ country: st
             <a href='/contact' style={{background: 'white', color: '#1d4ed8', fontWeight: 700, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>
               Send Medical Reports — Free
             </a>
-            <a href={'https://wa.me/918588807050?text=' + whatsappMsg} target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>
+            <a href={'https://wa.me/918588967050?text=' + whatsappMsg} target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>
               WhatsApp Us
             </a>
           </div>

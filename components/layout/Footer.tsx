@@ -13,9 +13,9 @@ export default function Footer() {
               <span style={{fontWeight: 700, color: "white", fontSize: "18px"}}>MySurgery</span>
             </div>
             <p style={{fontSize: "14px", color: "#6b7280", lineHeight: "1.7", marginBottom: "16px"}}>Advanced surgical care across India. Expert surgeons, minimal recovery, maximum outcomes.</p>
-            <a href="tel:+918588807050" style={{fontSize: "14px", color: "#93c5fd", textDecoration: "none", display: "block", marginBottom: "6px"}}>📞 8588807050</a>
+            <a href="tel:+918588967050" style={{fontSize: "14px", color: "#93c5fd", textDecoration: "none", display: "block", marginBottom: "6px"}}>📞 8588967050</a>
             <a href="mailto:info.mysurgery@gmail.com" style={{fontSize: "14px", color: "#93c5fd", textDecoration: "none", display: "block", marginBottom: "6px"}}>✉️ info.mysurgery@gmail.com</a>
-            <a href="https://wa.me/918588807050" target="_blank" rel="noopener noreferrer" style={{fontSize: "14px", color: "#22c55e", textDecoration: "none", display: "block"}}>WhatsApp Us</a>
+            <a href="https://wa.me/918588967050" target="_blank" rel="noopener noreferrer" style={{fontSize: "14px", color: "#22c55e", textDecoration: "none", display: "block"}}>WhatsApp Us</a>
           </div>
 
           {/* Treatments */}

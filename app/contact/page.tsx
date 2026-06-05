@@ -82,7 +82,7 @@ export default function ContactPage() {
 
       <div style={{marginTop: "24px", textAlign: "center"}}>
         <p style={{fontSize: "14px", color: "#6b7280", marginBottom: "8px"}}>Prefer to call directly?</p>
-        <a href="tel:+918588807050" style={{fontSize: "24px", fontWeight: 700, color: "#1d4ed8", textDecoration: "none"}}>�� 8588807050</a>
+        <a href="tel:+918588967050" style={{fontSize: "24px", fontWeight: 700, color: "#1d4ed8", textDecoration: "none"}}>�� 8588967050</a>
       </div>
     </main>
   )

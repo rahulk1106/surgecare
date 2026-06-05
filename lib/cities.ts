@@ -14,7 +14,7 @@ export const cities: City[] = [
     slug: 'gurugram',
     name: 'Gurugram',
     state: 'Haryana',
-    phone: '+91-8588807050',
+    phone: '+91-8588967050',
     hospitalCount: 15,
     surgeonCount: 40,
     hospitals: [
@@ -36,7 +36,7 @@ export const cities: City[] = [
     slug: 'delhi',
     name: 'Delhi',
     state: 'Delhi',
-    phone: '+91-8588807050',
+    phone: '+91-8588967050',
     hospitalCount: 25,
     surgeonCount: 80,
     hospitals: [
@@ -58,7 +58,7 @@ export const cities: City[] = [
     slug: 'noida',
     name: 'Noida',
     state: 'Uttar Pradesh',
-    phone: '+91-8588807050',
+    phone: '+91-8588967050',
     hospitalCount: 10,
     surgeonCount: 30,
     hospitals: [
@@ -78,7 +78,7 @@ export const cities: City[] = [
     slug: 'faridabad',
     name: 'Faridabad',
     state: 'Haryana',
-    phone: '+91-8588807050',
+    phone: '+91-8588967050',
     hospitalCount: 8,
     surgeonCount: 20,
     hospitals: [
@@ -96,7 +96,7 @@ export const cities: City[] = [
     slug: "kochi",
     name: "Kochi",
     state: "Kerala",
-    phone: "+91-8588807050",
+    phone: "+91-8588967050",
     hospitalCount: 8,
     surgeonCount: 25,
     hospitals: [
