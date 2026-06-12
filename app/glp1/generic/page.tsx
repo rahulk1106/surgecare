@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { genericBrands } from '@/lib/glp1'
 
 export const metadata: Metadata = {
-  title: 'Generic Semaglutide in India 2026 — All Brands, Prices & Comparison | MySurgery',
+  title: 'Generic Semaglutide in India 2026 — All Brands, Prices & Comparison',
   description: 'Complete guide to generic semaglutide in India 2026. 20+ brands from Natco, Sun Pharma, Glenmark, Dr Reddy\'s compared by price, form, and availability. From ₹325/week.',
   alternates: { canonical: '/glp1/generic' },
 }
@@ -40,8 +40,11 @@ export default function GenericPage() {
       </div>
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 24px' }}>
-        <div style={{ background: '#fef9c3', border: '1px solid #fde047', borderRadius: '12px', padding: '16px 20px', marginBottom: '28px', fontSize: '14px', color: '#713f12' }}>
+        <div style={{ background: '#fef9c3', border: '1px solid #fde047', borderRadius: '12px', padding: '16px 20px', marginBottom: '16px', fontSize: '14px', color: '#713f12' }}>
           <strong>Important:</strong> Generic semaglutide contains the same active molecule as Ozempic. CDSCO-approved generics from established Indian pharma companies meet bioequivalence standards. Always buy from a licensed pharmacy with a valid prescription from an endocrinologist.
+        </div>
+        <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: '12px', padding: '16px 20px', marginBottom: '28px', fontSize: '14px', color: '#7f1d1d' }}>
+          <strong>Buy safely:</strong> Semaglutide is a prescription drug under Indian law. With 40+ brands now on the market — including Lupin&apos;s Semanext, Eris&apos;s Sundae, and more launching monthly — buy only from licensed pharmacies; counterfeit pens and unverified online sellers are increasingly common.
         </div>
 
         <h2 style={{ fontSize: '22px', fontWeight: 700, color: '#0f172a', marginBottom: '20px' }}>All Generic Semaglutide Brands — Price Comparison</h2>

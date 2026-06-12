@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { glp1Controversies } from '@/lib/glp1'
 
 export const metadata: Metadata = {
-  title: 'GLP-1 Side Effects, Risks & Controversies — Complete India Guide 2026 | MySurgery',
+  title: 'GLP-1 Side Effects, Risks & Controversies — Complete India Guide 2026',
   description: 'Complete, balanced guide to GLP-1 drug side effects in India 2026. Nausea, muscle loss, thyroid cancer risk, weight regain, compounding drugs — the full picture.',
   alternates: { canonical: '/glp1/side-effects' },
 }
@@ -80,6 +80,7 @@ export default function SideEffectsPage() {
           <Link href='/glp1' style={{ fontSize: '13px', color: '#fca5a5', textDecoration: 'none', display: 'inline-block', marginBottom: '16px' }}>← Back to GLP-1 Hub</Link>
           <h1 style={{ fontSize: 'clamp(28px,5vw,46px)', fontWeight: 800, color: 'white', marginBottom: '12px' }}>GLP-1 Side Effects & Controversies</h1>
           <p style={{ fontSize: '18px', color: '#fca5a5', marginBottom: '16px' }}>The complete, honest picture — common side effects, serious risks, and the controversies the internet doesn&apos;t explain well.</p>
+          <p style={{ fontSize: '13px', color: '#fecaca', marginBottom: '16px' }}>Last updated: June 2026 · Reviewed by the <Link href='/editorial-policy' style={{ color: '#fecaca' }}>MySurgery editorial team</Link></p>
           <div style={{ background: 'rgba(255,255,255,0.1)', borderRadius: '10px', padding: '14px 18px', fontSize: '13px', color: '#fecaca', maxWidth: '600px' }}>
             This page presents evidence-based information. GLP-1 drugs have real benefits and real risks. The goal is to help you have an informed conversation with your doctor — not to replace medical advice.
           </div>

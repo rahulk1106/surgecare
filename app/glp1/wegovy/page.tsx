@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import GLP1FAQ from '@/components/glp1/GLP1FAQ'
 
 export const metadata: Metadata = {
-  title: 'Wegovy in India 2026 — Price, Dosing & Weight Loss Results | MySurgery',
+  title: 'Wegovy in India 2026 — Price, Dosing & Weight Loss Results',
   description: 'Complete guide to Wegovy (semaglutide 2.4mg) in India 2026. Current price after 48% April cut, dosing schedule, 15–17% weight loss results, and how to get a prescription.',
   alternates: { canonical: '/glp1/wegovy' },
 }
@@ -55,7 +56,7 @@ export default function WegovyPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px,1fr))', gap: '20px', marginBottom: '28px' }}>
           <div style={{ background: 'white', borderRadius: '16px', padding: '28px', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
             <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#0f172a', marginBottom: '16px' }}>What makes Wegovy different from Ozempic?</h2>
-            <p style={{ fontSize: '14px', color: '#374151', lineHeight: 1.7, marginBottom: '12px' }}>Both are semaglutide — but Wegovy is dosed at 2.4mg weekly vs Ozempic&apos;s maximum of 2mg. The higher dose produces greater appetite suppression and more weight loss.</p>
+            <p style={{ fontSize: '14px', color: '#374151', lineHeight: 1.7, marginBottom: '12px' }}>Both are semaglutide — but Wegovy is dosed at 2.4mg weekly vs Ozempic&apos;s maximum of 2mg. The higher dose produces greater appetite suppression and more weight loss. Novo Nordisk also sells Wegovy as <strong>Poviztra</strong> through Emcure for wider pharmacy availability in India.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {['15–17% body weight loss (vs 10–15% with Ozempic)', 'Specifically approved for obesity — not just diabetes', 'SELECT trial: 20% reduction in cardiovascular events', 'Approved in India June 2025 — first in India for obesity', 'Price cut 48% in April 2026 vs initial launch price'].map(p => (
                 <div key={p} style={{ display: 'flex', gap: '8px', fontSize: '13px', color: '#374151' }}>
@@ -104,6 +105,13 @@ export default function WegovyPage() {
         <div style={{ background: '#fef9c3', border: '1px solid #fde047', borderRadius: '12px', padding: '16px 20px', marginBottom: '24px', fontSize: '14px', color: '#713f12' }}>
           <strong>The weight regain concern:</strong> STEP trial data shows patients regain ~60% of lost weight within 1 year of stopping Wegovy. This means Wegovy is likely a lifelong treatment for most patients. Factor this into your cost planning.
         </div>
+
+        <GLP1FAQ accent='#7c3aed' faqs={[
+          { q: 'What is the price of Wegovy in India after the April 2026 price cut?', a: 'After Novo Nordisk’s 48% price cut effective April 2026, Wegovy starts at ₹5,660/month for the 0.25mg starter dose, rising through the escalation schedule to about ₹14,000/month at the 2.4mg maintenance dose.' },
+          { q: 'Is Wegovy worth it vs generic semaglutide?', a: 'Generic semaglutide contains the same molecule from ₹325/week, but most generics top out at lower doses. Wegovy delivers the full 2.4mg dose studied in the STEP trials (15–17% weight loss) with Novo Nordisk’s pen device and safety record. Discuss the dose-vs-cost trade-off with your endocrinologist.' },
+          { q: 'What happens if I stop taking Wegovy?', a: 'STEP trial data shows patients regain roughly 60% of lost weight within a year of stopping. For most patients Wegovy works best as a long-term treatment combined with diet, exercise and resistance training.' },
+          { q: 'What is Poviztra?', a: 'Poviztra is a second brand of Wegovy (semaglutide 2.4mg) sold by Novo Nordisk through Emcure to widen distribution in India. The molecule and dosing are the same as Wegovy.' },
+        ]} />
 
         <div style={{ background: 'linear-gradient(135deg, #4c1d95, #7c3aed)', borderRadius: '16px', padding: '32px', color: 'white' }}>
           <h3 style={{ fontSize: '20px', fontWeight: 700, marginBottom: '8px' }}>Ready to start Wegovy in India?</h3>

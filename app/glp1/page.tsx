@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { glp1Drugs, glp1Research, glp1Controversies, genericBrands } from '@/lib/glp1'
+import GLP1FAQ from '@/components/glp1/GLP1FAQ'
 
 const nav = [
   { label: 'Overview', href: '/glp1' },
@@ -329,6 +330,20 @@ export default function GLP1Hub() {
             </div>
           )}
         </div>
+      </div>
+
+      {/* RYBELSUS NOTE + FAQ */}
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '48px 24px 0' }}>
+        <div style={{ background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '12px', padding: '16px 20px', marginBottom: '24px', fontSize: '14px', color: '#1e40af', lineHeight: 1.6 }}>
+          <strong>Prefer pills over injections?</strong> Rybelsus is the daily tablet form of semaglutide — the same molecule as Ozempic. It costs roughly ₹3,000–5,000/month in India and is approved for Type 2 diabetes only. No generic oral semaglutide exists yet — the March 2026 patent expiry applies only to injectable semaglutide.
+        </div>
+        <GLP1FAQ faqs={[
+          { q: 'What are GLP-1 drugs?', a: 'GLP-1 receptor agonists (Ozempic, Wegovy, Mounjaro and generic semaglutide) mimic a natural gut hormone to control blood sugar, slow digestion and reduce appetite. They are prescribed in India for Type 2 diabetes and weight management, producing 10–22% body weight loss depending on the drug and dose.' },
+          { q: 'What is the cheapest GLP-1 drug in India in 2026?', a: 'Generic semaglutide vials (Glenmark GLIPIQ, Natco Semanat, Eris Sundae) start from ₹325/week (about ₹1,300/month) after the March 2026 patent expiry. Generic pens cost ₹450–1,125/week. Branded Ozempic starts at ₹708/week after the April 2026 price cut.' },
+          { q: 'Do I need a prescription for GLP-1 drugs in India?', a: 'Yes. GLP-1 drugs are prescription-only. Ministry of Health guidance from April 2026 says they should be prescribed by qualified specialists such as endocrinologists. Buying without a prescription is illegal and risky — counterfeit products are increasingly common.' },
+          { q: 'Is there a GLP-1 tablet instead of injections?', a: 'Yes — Rybelsus is the daily oral tablet form of semaglutide, costing roughly ₹3,000–5,000/month in India. It is approved for Type 2 diabetes only and produces less weight loss (5–10%) than weekly injections. No generic oral semaglutide is available yet.' },
+          { q: 'Are GLP-1 drugs better than bariatric surgery?', a: 'GLP-1 drugs achieve 15–22% weight loss without surgery but usually need lifelong use; stopping leads to 50–70% weight regain. Bariatric surgery achieves 25–35% sustained loss with one-time cost and possible diabetes remission. For BMI 40+, surgery still has superior outcomes — see our full comparison.' },
+        ]} />
       </div>
 
       {/* QUICK LINKS */}

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Mounjaro in India 2026 — Price, Dosing & 22% Weight Loss Results | MySurgery',
+  title: 'Mounjaro in India 2026 — Price, Dosing & 22% Weight Loss Results',
   description: 'Complete guide to Mounjaro (tirzepatide) in India 2026. Dual GIP+GLP-1 mechanism, 20–22% weight loss, current price, availability, and how to get a prescription.',
   alternates: { canonical: '/glp1/mounjaro' },
 }
@@ -89,7 +89,7 @@ export default function MounjaroPage() {
         <div style={{ background: 'white', borderRadius: '16px', padding: '28px', boxShadow: '0 2px 12px rgba(0,0,0,0.06)', marginBottom: '24px' }}>
           <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>Mounjaro Dose Schedule & Cost in India (2026)</h2>
           <div style={{ background: '#fef9c3', border: '1px solid #fde047', borderRadius: '8px', padding: '10px 14px', marginBottom: '16px', fontSize: '12px', color: '#713f12' }}>
-            No generic tirzepatide is available in India yet. The tirzepatide patent is in force. Expect generic launch in 2029–2030.
+            No cheap generic tirzepatide is available in India yet — the tirzepatide patent is in force, with generics expected around 2029–2030. However, Cipla now markets tirzepatide as <strong>Yurpeak</strong> (₹13,125–25,781/month, similar to Mounjaro pricing), giving patients a second branded option at pharmacies.
           </div>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
@@ -122,7 +122,7 @@ export default function MounjaroPage() {
           </div>
           <div style={{ background: '#fef2f2', borderRadius: '12px', padding: '20px', border: '1px solid #fecaca' }}>
             <h3 style={{ fontSize: '15px', fontWeight: 700, color: '#7f1d1d', marginBottom: '12px' }}>Mounjaro cautions</h3>
-            {['Most expensive GLP-1 in India (₹13,000–26,000/month)', 'Newer drug — less than 4 years post-approval safety data', 'Higher rate of GI side effects at higher doses', 'No generic available — no price reduction expected until 2029', 'Contraindicated in MTC history and MEN2 syndrome'].map(p => (
+            {['Most expensive GLP-1 in India (₹13,000–26,000/month)', 'Newer drug — less than 4 years post-approval safety data', 'Higher rate of GI side effects at higher doses', 'No cheap generic available — big price reduction unlikely before 2029 (Cipla’s Yurpeak is similarly priced)', 'Contraindicated in MTC history and MEN2 syndrome'].map(p => (
               <div key={p} style={{ fontSize: '12px', color: '#991b1b', marginBottom: '6px', display: 'flex', gap: '6px' }}><span>⚠️</span>{p}</div>
             ))}
           </div>

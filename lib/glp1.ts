@@ -148,6 +148,9 @@ export const genericBrands: GenericBrand[] = [
   { brand: 'Samakind', company: 'Mankind', form: 'Pen', pricePerWeek: 920, available: true },
   { brand: 'Semalix', company: 'Torrent', form: 'Pen + Oral', pricePerWeek: 1000, available: true },
   { brand: 'Sembolic', company: 'Torrent', form: 'Oral tablet', pricePerWeek: 600, available: true },
+  { brand: 'Sundae', company: 'Eris Lifesciences', form: 'Vial', pricePerWeek: 325, available: true },
+  { brand: 'Sematrinity', company: 'Sun Pharma', form: 'Pen', pricePerWeek: 740, available: true },
+  { brand: 'Hepaglide', company: 'Alkem', form: 'Pen', pricePerWeek: 450, available: true },
 ]
 
 // ── RESEARCH ──────────────────────────────────────────────────────────────────

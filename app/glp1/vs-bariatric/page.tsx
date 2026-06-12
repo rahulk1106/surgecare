@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'GLP-1 vs Bariatric Surgery India 2026 — Which is Right for You? | MySurgery',
+  title: 'GLP-1 vs Bariatric Surgery India 2026 — Which is Right for You?',
   description: 'Complete comparison of GLP-1 drugs vs bariatric surgery in India 2026. Weight loss outcomes, cost, risks, and which option is right based on your BMI and health profile.',
   alternates: { canonical: '/glp1/vs-bariatric' },
 }
@@ -44,6 +44,7 @@ export default function VsBariatricPage() {
           <Link href='/glp1' style={{ fontSize: '13px', color: '#a5b4fc', textDecoration: 'none', display: 'inline-block', marginBottom: '16px' }}>← Back to GLP-1 Hub</Link>
           <h1 style={{ fontSize: 'clamp(28px,5vw,46px)', fontWeight: 800, color: 'white', marginBottom: '12px' }}>GLP-1 vs Bariatric Surgery</h1>
           <p style={{ fontSize: '18px', color: '#a5b4fc', marginBottom: '16px' }}>The most important decision in obesity treatment. A complete, honest comparison for Indian patients in 2026.</p>
+          <p style={{ fontSize: '13px', color: '#c7d2fe', marginBottom: '16px' }}>Last updated: June 2026 · Reviewed by the <Link href='/editorial-policy' style={{ color: '#c7d2fe' }}>MySurgery editorial team</Link></p>
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             <div style={{ background: 'rgba(29,78,216,0.3)', border: '1px solid rgba(29,78,216,0.5)', borderRadius: '10px', padding: '12px 20px', color: '#93c5fd', fontSize: '14px', fontWeight: 600 }}>💊 GLP-1: 15–22% weight loss</div>
             <div style={{ background: 'rgba(124,58,237,0.3)', border: '1px solid rgba(124,58,237,0.5)', borderRadius: '10px', padding: '12px 20px', color: '#c4b5fd', fontSize: '14px', fontWeight: 600 }}>🔪 Bariatric: 25–35% weight loss</div>

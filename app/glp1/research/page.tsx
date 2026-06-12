@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { glp1Research } from '@/lib/glp1'
 
 export const metadata: Metadata = {
-  title: 'GLP-1 Research Hub 2026 — Latest Clinical Trials, Benefits & Risks | MySurgery',
+  title: 'GLP-1 Research Hub 2026 — Latest Clinical Trials, Benefits & Risks',
   description: 'The most comprehensive GLP-1 research summary for Indian patients. Benefits, risks, and open questions from NEJM, The Lancet, ASCO, and NIH updated June 2026.',
   alternates: { canonical: '/glp1/research' },
 }
@@ -33,7 +33,8 @@ export default function ResearchPage() {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <Link href='/glp1' style={{ fontSize: '13px', color: '#7dd3fc', textDecoration: 'none', display: 'inline-block', marginBottom: '16px' }}>← Back to GLP-1 Hub</Link>
           <h1 style={{ fontSize: 'clamp(28px,5vw,46px)', fontWeight: 800, color: 'white', marginBottom: '12px' }}>GLP-1 Research Hub</h1>
-          <p style={{ fontSize: '18px', color: '#7dd3fc', marginBottom: '24px' }}>Every major clinical finding — benefits, risks, and open questions — updated June 2026</p>
+          <p style={{ fontSize: '18px', color: '#7dd3fc', marginBottom: '12px' }}>Every major clinical finding — benefits, risks, and open questions — updated June 2026</p>
+          <p style={{ fontSize: '13px', color: '#bae6fd', marginBottom: '24px' }}>Last updated: June 2026 · Reviewed by the <Link href='/editorial-policy' style={{ color: '#bae6fd' }}>MySurgery editorial team</Link></p>
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             {[[benefits.length.toString(), 'Confirmed benefits'], [risks.length.toString(), 'Known risks'], ['5+', 'Major trials cited'], ['2026', 'Last updated']].map(([n, l]) => (
               <div key={l} style={{ background: 'rgba(255,255,255,0.1)', borderRadius: '10px', padding: '14px 20px' }}>

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import GLP1FAQ from '@/components/glp1/GLP1FAQ'
 
 export const metadata: Metadata = {
-  title: 'Ozempic in India 2026 — Price, Availability, Dosing & Side Effects | MySurgery',
+  title: 'Ozempic in India 2026 — Price, Availability, Dosing & Side Effects',
   description: 'Complete guide to Ozempic (semaglutide) in India 2026. Current price after April 2026 cut, availability, dosing schedule, and how to get a prescription.',
   alternates: { canonical: '/glp1/ozempic' },
 }
@@ -89,7 +90,8 @@ export default function OzempicPage() {
               </div>
             ))}
           </div>
-          <p style={{ fontSize: '14px', color: '#64748b', lineHeight: 1.6 }}>Ozempic was approved in India by CDSCO in September 2025 and officially launched by Novo Nordisk in December 2025. Novo Nordisk cut prices by 36% in April 2026 in response to Indian generic competition.</p>
+          <p style={{ fontSize: '14px', color: '#64748b', lineHeight: 1.6, marginBottom: '12px' }}>Ozempic was approved in India by CDSCO in September 2025 and officially launched by Novo Nordisk in December 2025. Novo Nordisk cut prices by 36% in April 2026 in response to Indian generic competition.</p>
+          <p style={{ fontSize: '14px', color: '#64748b', lineHeight: 1.6 }}>Novo Nordisk also sells Ozempic as <strong>Extensior</strong> through Abbott India, and Wegovy as <strong>Poviztra</strong> through Emcure, for wider pharmacy availability. The same molecule is available as a daily tablet called <strong>Rybelsus</strong> (₹3,000–5,000/month, Type 2 diabetes only) — note that the April 2026 price cut applies only to the injectable forms.</p>
         </section>
 
         {/* DOSING */}
@@ -158,6 +160,16 @@ export default function OzempicPage() {
             <a href='https://wa.me/918588967050' target='_blank' rel='noopener noreferrer' style={{ background: 'rgba(255,255,255,0.15)', color: 'white', fontWeight: 600, padding: '13px 24px', borderRadius: '10px', textDecoration: 'none', fontSize: '14px' }}>WhatsApp Us</a>
           </div>
         </section>
+
+        {/* FAQ */}
+        <GLP1FAQ faqs={[
+          { q: 'What is the price of Ozempic in India after the April 2026 price cut?', a: 'After Novo Nordisk’s 36% price cut effective April 2026, Ozempic starts at ₹708/week (₹2,832/month) for the 0.25mg starter dose. The 0.5mg and 1mg maintenance doses cost around ₹1,415/week (₹5,660/month). Exact MRPs can vary slightly between pharmacies.' },
+          { q: 'Is generic semaglutide cheaper than Ozempic?', a: 'Yes. CDSCO-approved generic semaglutide contains the identical molecule and starts from ₹325/week in vial form (Glenmark GLIPIQ, Natco Semanat) and ₹800–1,125/week in pen form — significantly cheaper than branded Ozempic even after the April 2026 cut.' },
+          { q: 'Do I need a prescription for Ozempic in India?', a: 'Yes. Ozempic is a prescription-only medicine. Per Ministry of Health guidance issued in April 2026, GLP-1 drugs should be prescribed by qualified specialists such as endocrinologists. Buying without a prescription is illegal and unsafe.' },
+          { q: 'Can Ozempic be used for weight loss in India?', a: 'Ozempic is approved in India for Type 2 diabetes and is used off-label for weight loss under medical supervision. Wegovy — the same molecule at a higher 2.4mg dose — is the version specifically approved for chronic weight management.' },
+          { q: 'What is Rybelsus and how is it different from Ozempic?', a: 'Rybelsus is the daily oral tablet form of semaglutide, for people who prefer pills over injections. It costs roughly ₹3,000–5,000/month in India, is approved for Type 2 diabetes only, and produces less weight loss (5–10%) than the weekly injection. No generic oral semaglutide exists yet.' },
+          { q: 'What is Extensior?', a: 'Extensior is a second brand of Ozempic (semaglutide) sold by Novo Nordisk through Abbott India to widen distribution. The molecule and dosing are the same as Ozempic.' },
+        ]} />
 
         {/* COMPARE */}
         <div style={{ background: '#f8fafc', borderRadius: '12px', padding: '20px', border: '1px solid #e2e8f0', display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' }}>

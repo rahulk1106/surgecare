@@ -135,6 +135,10 @@ export default function CostPage() {
           </div>
         </div>
 
+        <div style={{ background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '12px', padding: '16px 20px', marginBottom: '24px', fontSize: '14px', color: '#1e40af' }}>
+          <strong>Rybelsus (oral semaglutide):</strong> The daily tablet form of semaglutide costs roughly ₹3,000–5,000/month in India. It is approved for Type 2 diabetes only, and the April 2026 price cut does not apply to it. No generic oral semaglutide is available yet.
+        </div>
+
         <div style={{ background: '#fef9c3', border: '1px solid #fde047', borderRadius: '12px', padding: '16px 20px', marginBottom: '24px', fontSize: '14px', color: '#713f12' }}>
           <strong>No insurance coverage:</strong> As of June 2026, no IRDAI-regulated health insurance policy in India covers GLP-1 medications for obesity. For Type 2 diabetes indication, some policies may cover injectable diabetes medications — check your policy document.
         </div>
