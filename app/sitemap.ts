@@ -40,100 +40,82 @@ const blogs = ['piles-laser-surgery-cost-gurugram-2025', 'hernia-surgery-recover
   'glp1-compounded-fda-crackdown-india-june-2026',
   'glp1-semaglutide-biological-aging-india-june-2026',
   'glp1-weight-loss-plateau-india-june-2026',
-  'glp1-exercise-decline-india-june-2026']
-
-const doctors = ['dr-ashish-bhanot-proctologist-delhi', 'dr-mir-asif-proctologist-gurugram', 'dr-anil-sharma-proctologist-gurugram', 'dr-sunil-kumar-proctologist-noida', 'dr-rajan-babu-proctologist-kochi', 'dr-vikram-sharma-proctologist-mumbai', 'dr-krishna-iyer-proctologist-chennai', 'dr-rahul-gupta-proctologist-lucknow', 'dr-nitin-jha-laparoscopic-noida', 'dr-rakesh-kumar-laparoscopic-gurugram', 'dr-priya-nair-laparoscopic-gurugram', 'dr-lokendra-kumar-laparoscopic-noida', 'dr-vs-chauhan-laparoscopic-noida', 'dr-nitin-gupta-laparoscopic-noida', 'dr-arun-prasad-laparoscopic-delhi', 'dr-faisal-mumtaz-laparoscopic-delhi', 'dr-roji-philip-laparoscopic-mumbai', 'dr-ashok-borisa-laparoscopic-mumbai', 'dr-jagdish-chander-laparoscopic-noida', 'dr-manish-nigam-laparoscopic-noida', 'dr-rajiv-tandon-urologist-delhi', 'dr-avinash-koul-urologist-noida', 'dr-amit-khanna-urologist-noida', 'dr-sandeep-nunia-urologist-delhi', 'dr-anant-kumar-urologist-delhi', 'dr-rajan-menon-urologist-kochi', 'dr-dilip-raja-urologist-chennai', 'dr-suresh-patankar-urologist-pune', 'dr-sanjay-gogoi-urologist-mumbai', 'dr-meera-krishnan-gynaecologist-kochi', 'dr-sarah-thomas-gynaecologist-kochi', 'dr-nandita-palshetkar-gynaecologist-mumbai', 'dr-geeta-chadha-gynaecologist-delhi', 'dr-meenakshi-ahuja-gynaecologist-delhi', 'dr-shobha-gupta-gynaecologist-delhi', 'dr-rekha-wadhwani-gynaecologist-gurugram', 'dr-aruna-muralidhar-gynaecologist-bangalore', 'dr-suresh-malhotra-orthopaedic-delhi', 'dr-anoop-jhurani-orthopaedic-delhi', 'dr-gurinder-bedi-orthopaedic-delhi', 'dr-rajan-menon-orthopaedic-kochi', 'dr-subhash-jangid-orthopaedic-delhi', 'dr-ashok-rajgopal-orthopaedic-gurugram', 'dr-jayant-arora-orthopaedic-delhi', 'dr-pradeep-sharma-orthopaedic-pune', 'dr-kavita-rao-ophthalmologist-gurugram', 'dr-mahipal-sachdev-ophthalmologist-delhi', 'dr-anita-sethi-ophthalmologist-delhi', 'dr-anil-kulkarni-ophthalmologist-pune', 'dr-rajesh-venkatesh-ophthalmologist-bangalore', 'dr-kim-ramasamy-ophthalmologist-madurai', 'dr-rajat-gupta-aesthetic-delhi', 'dr-vivek-kumar-aesthetic-delhi', 'dr-debraj-shome-aesthetic-mumbai', 'dr-priti-shukla-aesthetic-bangalore', 'dr-rajesh-bharat-ent-delhi', 'dr-milind-kirtane-ent-mumbai', 'dr-smt-pillai-ent-kochi', 'dr-kiran-bala-ent-delhi', 'dr-satish-jain-ent-gurugram', 'dr-ashok-borisa-laparoscopic-pune', 'dr-kishore-raj-laparoscopic-bangalore', 'dr-ravi-shankar-laparoscopic-chennai', 'dr-sanjay-pandya-laparoscopic-ahmedabad', 'dr-saurabh-shrivastava-laparoscopic-indore', 'dr-sunita-varma-gynaecologist-lucknow', 'dr-kavitha-reddy-gynaecologist-vijayawada', 'dr-ramesh-babu-orthopaedic-vizag', 'dr-prakash-narayanan-ent-trivandrum', 'dr-sudarshan-ophthalmologist-coimbatore', 'dr-rajiv-kumar-laparoscopic-patna', 'dr-sanjay-gupta-laparoscopic-ranchi', 'dr-prashant-mishra-laparoscopic-raipur', 'dr-srikant-sahoo-laparoscopic-bhubaneswar']
-
-const communityPages = ['is-laser-piles-surgery-painful-recovery', 'mtp-without-husband-permission-india-legal', 'hernia-surgery-recovery-time-desk-job', 'laser-circumcision-adult-recovery-time', 'knee-replacement-insurance-waiting-period', 'cataract-surgery-multifocal-lens-worth-it', 'mtp-pills-vs-surgical-which-better', 'piles-grade-3-laser-or-stapler', 'zsr-vs-laser-circumcision-difference', 'hernia-mesh-imported-vs-indian-difference']
+  'glp1-exercise-decline-india-june-2026',
+  'glp1-male-fertility-testosterone-india-june-2026']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
   const urls: MetadataRoute.Sitemap = []
 
-  // Static pages
-  const statics: Array<[string, number, MetadataRoute.Sitemap[0]['changeFrequency']]> = [
-    [BASE, 1.0, 'weekly'],
-    [BASE + '/contact', 0.95, 'monthly'],
-    [BASE + '/mtp-abortion', 0.95, 'weekly'],
-    [BASE + '/circumcision', 0.95, 'weekly'],
-    [BASE + '/doctors', 0.9, 'weekly'],
-    [BASE + '/community', 0.9, 'daily'],
-    [BASE + '/blog', 0.85, 'weekly'],
-    [BASE + '/cities', 0.8, 'monthly'],
-    [BASE + '/about', 0.6, 'monthly'],
-    [BASE + '/doctors/claim', 0.7, 'monthly'],
+  // ── CORE PAGES (highest priority) ──────────────────────────────────────────
+  const corePagesHigh = [
+    ['/', 1.0],
+    ['/india', 0.95],
+    ['/contact', 0.9],
+    ['/about', 0.8],
+    ['/blog', 0.85],
+    ['/community', 0.85],
+    ['/doctors', 0.8],
+    ['/cities', 0.75],
+    ['/medical-tourism', 0.85],
   ]
-  statics.forEach(([url, priority, changeFrequency]) =>
-    urls.push({ url, lastModified: now, changeFrequency, priority })
+  corePagesHigh.forEach(([url, priority]) =>
+    urls.push({ url: BASE + url, lastModified: now, changeFrequency: 'weekly', priority: priority as number })
   )
 
-  // Disease main pages
-  diseases.forEach(slug =>
-    urls.push({ url: BASE + '/treatment/' + slug, lastModified: now, changeFrequency: 'weekly', priority: 0.9 })
+  // ── LEGAL PAGES ─────────────────────────────────────────────────────────────
+  ;['/privacy-policy', '/terms-and-conditions', '/editorial-policy'].forEach(url =>
+    urls.push({ url: BASE + url, lastModified: now, changeFrequency: 'yearly', priority: 0.4 })
   )
 
-  // Disease cost-analysis pages
-  diseases.forEach(slug =>
-    urls.push({ url: BASE + '/treatment/' + slug + '/cost-analysis', lastModified: now, changeFrequency: 'weekly', priority: 0.85 })
+  // ── SPECIAL PAGES ───────────────────────────────────────────────────────────
+  ;['/piles-symptoms-checker', '/circumcision-checker', '/piles-home-remedies',
+    '/mtp-abortion', '/circumcision', '/partner/register'].forEach(url =>
+    urls.push({ url: BASE + url, lastModified: now, changeFrequency: 'monthly', priority: 0.85 })
   )
 
-  // Disease x city cost pages
-  diseases.forEach(slug =>
+  // ── MEDICAL TOURISM COUNTRIES ───────────────────────────────────────────────
+  const tourismCountries = ['uae', 'saudi-arabia', 'oman', 'kuwait', 'bahrain', 'qatar', 'nigeria', 'kenya', 'ethiopia', 'ghana', 'tanzania', 'uganda']
+  tourismCountries.forEach(country =>
+    urls.push({ url: BASE + '/medical-tourism/' + country, lastModified: now, changeFrequency: 'monthly', priority: 0.8 })
+  )
+
+  // ── DISEASE TREATMENT PAGES ─────────────────────────────────────────────────
+  diseases.forEach(disease =>
+    urls.push({ url: BASE + '/treatment/' + disease, lastModified: now, changeFrequency: 'weekly', priority: 0.9 })
+  )
+
+  // ── DISEASE COST ANALYSIS PAGES ─────────────────────────────────────────────
+  diseases.forEach(disease =>
+    urls.push({ url: BASE + '/treatment/' + disease + '/cost-analysis', lastModified: now, changeFrequency: 'weekly', priority: 0.85 })
+  )
+
+  // ── DISEASE + CITY PAGES ────────────────────────────────────────────────────
+  diseases.forEach(disease =>
     cities.forEach(city =>
-      urls.push({ url: BASE + '/treatment/' + slug + '/cost-' + city, lastModified: now, changeFrequency: 'weekly', priority: 0.85 })
+      urls.push({ url: BASE + '/treatment/' + disease + '/' + city, lastModified: now, changeFrequency: 'monthly', priority: 0.8 })
     )
   )
 
-  // City pages
+  // ── CITY PAGES ──────────────────────────────────────────────────────────────
+  urls.push({ url: BASE + '/cities', lastModified: now, changeFrequency: 'monthly', priority: 0.75 })
   cities.forEach(city =>
-    urls.push({ url: BASE + '/cities/' + city, lastModified: now, changeFrequency: 'weekly', priority: 0.8 })
+    urls.push({ url: BASE + '/cities/' + city, lastModified: now, changeFrequency: 'monthly', priority: 0.75 })
   )
 
-  // Doctor city pages
+  // ── DOCTOR PAGES ────────────────────────────────────────────────────────────
   cities.forEach(city =>
-    urls.push({ url: BASE + '/doctors/city/' + city, lastModified: now, changeFrequency: 'weekly', priority: 0.75 })
+    urls.push({ url: BASE + '/doctors/city/' + city, lastModified: now, changeFrequency: 'monthly', priority: 0.7 })
   )
+  urls.push({ url: BASE + '/doctors/claim', lastModified: now, changeFrequency: 'yearly', priority: 0.5 })
 
-  // Blog posts
+  // ── BLOG POSTS ──────────────────────────────────────────────────────────────
   blogs.forEach(slug =>
-    urls.push({ url: BASE + '/blog/' + slug, lastModified: now, changeFrequency: 'monthly', priority: 0.75 })
+    urls.push({ url: BASE + '/blog/' + slug, lastModified: now, changeFrequency: 'monthly', priority: 0.8 })
   )
 
-  // Doctor profiles
-  doctors.forEach(slug =>
-    urls.push({ url: BASE + '/doctors/' + slug, lastModified: now, changeFrequency: 'monthly', priority: 0.7 })
-  )
-
-  // Community Q&A pages
-  // Legal and policy pages
-  urls.push({ url: BASE + '/privacy-policy', lastModified: now, changeFrequency: 'yearly' as const, priority: 0.5 })
-  urls.push({ url: BASE + '/terms-and-conditions', lastModified: now, changeFrequency: 'yearly' as const, priority: 0.5 })
-  urls.push({ url: BASE + '/editorial-policy', lastModified: now, changeFrequency: 'yearly' as const, priority: 0.5 })
-
-  // India homepage
-  urls.push({ url: BASE + '/india', lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 })
-
-  // GLP-1 hub
-  const glp1Pages = ['', '/ozempic', '/wegovy', '/mounjaro', '/generic', '/cost', '/research', '/side-effects', '/vs-bariatric']
-  glp1Pages.forEach(p =>
-    urls.push({ url: BASE + '/glp1' + p, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.95 })
-  )
-
-  // Symptom checkers and tools
-  urls.push({ url: BASE + '/piles-symptoms-checker', lastModified: now, changeFrequency: 'monthly' as const, priority: 0.85 })
-  urls.push({ url: BASE + '/circumcision-checker', lastModified: now, changeFrequency: 'monthly' as const, priority: 0.85 })
-  urls.push({ url: BASE + '/piles-home-remedies', lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 })
-
-  // Medical tourism pages
-  urls.push({ url: BASE + '/medical-tourism', lastModified: now, changeFrequency: 'weekly' as const, priority: 0.85 })
-  const tourismCountries = ['uae', 'saudi-arabia', 'oman', 'kuwait', 'bahrain', 'qatar', 'nigeria', 'kenya', 'ethiopia', 'ghana', 'tanzania', 'uganda']
-  tourismCountries.forEach(country =>
-    urls.push({ url: BASE + '/medical-tourism/' + country, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 })
-  )
-
-  communityPages.forEach(slug =>
-    urls.push({ url: BASE + '/community/' + slug, lastModified: now, changeFrequency: 'weekly', priority: 0.75 })
-  )
+  // ── COMMUNITY PAGES ─────────────────────────────────────────────────────────
+  urls.push({ url: BASE + '/community', lastModified: now, changeFrequency: 'daily', priority: 0.85 })
 
   return urls
 }
