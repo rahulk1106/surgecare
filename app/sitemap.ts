@@ -41,7 +41,8 @@ const blogs = ['piles-laser-surgery-cost-gurugram-2025', 'hernia-surgery-recover
   'glp1-semaglutide-biological-aging-india-june-2026',
   'glp1-weight-loss-plateau-india-june-2026',
   'glp1-exercise-decline-india-june-2026',
-  'glp1-male-fertility-testosterone-india-june-2026']
+  'glp1-male-fertility-testosterone-india-june-2026',
+  'glp1-autoimmune-heart-protection-india-june-2026']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
