@@ -48,7 +48,9 @@ const blogs = ['piles-laser-surgery-cost-gurugram-2025', 'hernia-surgery-recover
   'glp1-stopping-weight-regain-india-july-2026',
   'glp1-peripheral-artery-disease-pad-india-july-2026',
   'glp1-medicare-coverage-india-lessons-july-2026',
-  'glp1-biweekly-injection-bofanglutide-india-july-2026']
+  'glp1-biweekly-injection-bofanglutide-india-july-2026',
+  'glp1-impulsivity-violence-behavior-india-july-2026',
+  'glp1-tirzepatide-vs-semaglutide-weight-loss-india-july-2026']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
