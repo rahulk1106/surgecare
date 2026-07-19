@@ -56,7 +56,8 @@ const blogs = ['piles-laser-surgery-cost-gurugram-2025', 'hernia-surgery-recover
   'glp1-orforglipron-beats-oral-ozempic-lancet-india-july-2026',
   'glp1-pcos-fertility-india-july-2026',
   'glp1-generic-tirzepatide-mounjaro-india-july-2026',
-  'glp1-dementia-prevention-protect-cog-india-july-2026']
+  'glp1-dementia-prevention-protect-cog-india-july-2026',
+  'glp1-aleniglipron-oral-pill-india-july-2026']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
