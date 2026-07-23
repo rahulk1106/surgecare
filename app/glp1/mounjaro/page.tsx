@@ -4,6 +4,16 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Mounjaro in India 2026 — Price, Dosing & 22% Weight Loss Results',
   description: 'Complete guide to Mounjaro (tirzepatide) in India 2026. Dual GIP+GLP-1 mechanism, 20–22% weight loss, current price, availability, and how to get a prescription.',
+  keywords: [
+    'Mounjaro India 2026',
+    'Mounjaro price India',
+    'tirzepatide India',
+    'Mounjaro vs Ozempic India',
+    'tirzepatide price India',
+    'best weight loss drug India 2026',
+    'GIP GLP-1 agonist India',
+    'Mounjaro availability India',
+  ],
   alternates: { canonical: '/glp1/mounjaro' },
 }
 

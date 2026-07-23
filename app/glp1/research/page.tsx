@@ -5,6 +5,16 @@ import { glp1Research } from '@/lib/glp1'
 export const metadata: Metadata = {
   title: 'GLP-1 Research Hub 2026 — Latest Clinical Trials, Benefits & Risks',
   description: 'The most comprehensive GLP-1 research summary for Indian patients. Benefits, risks, and open questions from NEJM, The Lancet, ASCO, and NIH updated June 2026.',
+  keywords: [
+    'GLP-1 research 2026',
+    'semaglutide clinical trials India',
+    'GLP-1 benefits risks India',
+    'Ozempic heart protection India',
+    'semaglutide weight loss evidence',
+    'GLP-1 kidney protection',
+    'tirzepatide vs semaglutide trial',
+    'GLP-1 cancer risk research',
+  ],
   alternates: { canonical: '/glp1/research' },
 }
 

@@ -5,6 +5,16 @@ import GLP1FAQ from '@/components/glp1/GLP1FAQ'
 export const metadata: Metadata = {
   title: 'Wegovy in India 2026 — Price, Dosing & Weight Loss Results',
   description: 'Complete guide to Wegovy (semaglutide 2.4mg) in India 2026. Current price after 48% April cut, dosing schedule, 15–17% weight loss results, and how to get a prescription.',
+  keywords: [
+    'Wegovy India 2026',
+    'Wegovy price India',
+    'semaglutide 2.4mg India',
+    'Wegovy weight loss India',
+    'Wegovy vs Ozempic India',
+    'buy Wegovy India',
+    'Wegovy cost per month India',
+    'obesity drug India 2026',
+  ],
   alternates: { canonical: '/glp1/wegovy' },
 }
 

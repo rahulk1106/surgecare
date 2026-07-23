@@ -4,6 +4,16 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'GLP-1 vs Bariatric Surgery India 2026 — Which is Right for You?',
   description: 'Complete comparison of GLP-1 drugs vs bariatric surgery in India 2026. Weight loss outcomes, cost, risks, and which option is right based on your BMI and health profile.',
+  keywords: [
+    'GLP-1 vs bariatric surgery India',
+    'Ozempic vs weight loss surgery India',
+    'semaglutide vs sleeve gastrectomy India',
+    'bariatric surgery cost India 2026',
+    'weight loss treatment India',
+    'obesity surgery vs GLP-1 India',
+    'Mounjaro vs bariatric surgery',
+    'best obesity treatment India 2026',
+  ],
   alternates: { canonical: '/glp1/vs-bariatric' },
 }
 

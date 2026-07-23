@@ -5,6 +5,17 @@ import { genericBrands } from '@/lib/glp1'
 export const metadata: Metadata = {
   title: 'Generic Semaglutide in India 2026 — All Brands, Prices & Comparison',
   description: 'Complete guide to generic semaglutide in India 2026. 20+ brands from Natco, Sun Pharma, Glenmark, Dr Reddy\'s compared by price, form, and availability. From ₹325/week.',
+  keywords: [
+    'generic semaglutide India 2026',
+    'cheapest semaglutide India',
+    'Obeda Dr Reddys semaglutide',
+    'Noveltreat semaglutide India',
+    'Natco semaglutide India',
+    'Glenmark GLIPIQ semaglutide',
+    'Sun Pharma semaglutide',
+    'semaglutide patent expiry India',
+    'generic Ozempic India',
+  ],
   alternates: { canonical: '/glp1/generic' },
 }
 

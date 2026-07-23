@@ -5,6 +5,16 @@ import { glp1Controversies } from '@/lib/glp1'
 export const metadata: Metadata = {
   title: 'GLP-1 Side Effects, Risks & Controversies — Complete India Guide 2026',
   description: 'Complete, balanced guide to GLP-1 drug side effects in India 2026. Nausea, muscle loss, thyroid cancer risk, weight regain, compounding drugs — the full picture.',
+  keywords: [
+    'GLP-1 side effects India',
+    'Ozempic side effects India',
+    'semaglutide nausea India',
+    'semaglutide muscle loss',
+    'Ozempic thyroid cancer risk India',
+    'GLP-1 weight regain after stopping',
+    'semaglutide risks India',
+    'GLP-1 safety India 2026',
+  ],
   alternates: { canonical: '/glp1/side-effects' },
 }
 

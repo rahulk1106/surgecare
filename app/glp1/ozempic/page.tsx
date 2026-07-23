@@ -5,6 +5,16 @@ import GLP1FAQ from '@/components/glp1/GLP1FAQ'
 export const metadata: Metadata = {
   title: 'Ozempic in India 2026 — Price, Availability, Dosing & Side Effects',
   description: 'Complete guide to Ozempic (semaglutide) in India 2026. Current price after April 2026 cut, availability, dosing schedule, and how to get a prescription.',
+  keywords: [
+    'Ozempic price India 2026',
+    'Ozempic India',
+    'semaglutide injection India',
+    'Ozempic cost per month India',
+    'Ozempic 1mg price India',
+    'buy Ozempic India',
+    'Ozempic availability India',
+    'semaglutide India 2026',
+  ],
   alternates: { canonical: '/glp1/ozempic' },
 }
 
