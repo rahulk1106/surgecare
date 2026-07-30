@@ -71,7 +71,7 @@ export default function Navbar() {
                   style={{position:'absolute',top:'100%',left:0,background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',boxShadow:'0 8px 32px rgba(0,0,0,0.15)',padding:'8px',minWidth:'240px',zIndex:9999}}
                 >
                   {cat.diseases.map(d => (
-                    <Link key={d.slug} href={'/treatment/'+d.slug}
+                    <Link key={d.slug} href={d.slug === 'lasik' ? '/treatment/lasik' : '/treatment/'+d.slug}
                       style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'9px 14px',fontSize:'14px',color:'#374151',textDecoration:'none',borderRadius:'8px'}}
                       onMouseEnter={e => (e.currentTarget.style.background='#eff6ff')}
                       onMouseLeave={e => (e.currentTarget.style.background='transparent')}
@@ -81,7 +81,7 @@ export default function Navbar() {
                     </Link>
                   ))}
                   <div style={{borderTop:'1px solid #f0f0f0',margin:'4px 0'}}/>
-                  <Link href='/treatments'
+                  <Link href={'/treatment/' + cat.diseases[0]?.slug || '/treatments'}
                     style={{display:'block',padding:'9px 14px',fontSize:'13px',color:'#1d4ed8',fontWeight:500,textDecoration:'none',borderRadius:'8px'}}
                     onMouseEnter={e => (e.currentTarget.style.background='#eff6ff')}
                     onMouseLeave={e => (e.currentTarget.style.background='transparent')}
@@ -157,7 +157,7 @@ export default function Navbar() {
                 {mobileCat === cat.slug && (
                   <div style={{paddingLeft:'12px',paddingBottom:'8px'}}>
                     {cat.diseases.map(d => (
-                      <Link key={d.slug} href={'/treatment/'+d.slug} onClick={() => setMobileOpen(false)} style={{display:'flex',justifyContent:'space-between',padding:'9px 4px',fontSize:'14px',color:'#374151',textDecoration:'none',borderBottom:'1px solid #f8f8f8'}}>
+                      <Link key={d.slug} href={d.slug === 'lasik' ? '/treatment/lasik' : '/treatment/'+d.slug} onClick={() => setMobileOpen(false)} style={{display:'flex',justifyContent:'space-between',padding:'9px 4px',fontSize:'14px',color:'#374151',textDecoration:'none',borderBottom:'1px solid #f8f8f8'}}>
                         <span>{d.name}</span>
                         <span style={{fontSize:'12px',color:'#6b7280'}}>{d.costRange.split('–')[0].trim()}</span>
                       </Link>

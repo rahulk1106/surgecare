@@ -5,6 +5,7 @@ import Navbar from '@/components/layout/Navbar'
 import WhatsAppButton from '@/components/layout/WhatsAppButton'
 import StickyCallButton from '@/components/layout/StickyCallButton'
 import Footer from '@/components/layout/Footer'
+import LeadPopup from '@/components/LeadPopup'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,15 +17,16 @@ export const metadata: Metadata = {
   },
   description: 'MySurgery connects patients with top surgeons and NABH-accredited hospitals across India. Free consultation, insurance support, same-day discharge.',
   keywords: [
-    'surgery facilitation India',
-    'piles laser treatment Gurugram',
-    'hernia surgery Noida',
-    'knee replacement india',
-    'free surgical consultation',
+    'surgery in India', 'best surgeons India', 'laser piles surgery',
+    'hernia surgery India', 'knee replacement India', 'LASIK eye surgery India',
+    'circumcision surgery India', 'MTP abortion India', 'free surgery consultation',
+    'NABH hospital India', 'laparoscopic surgery India', 'surgery cost India',
+    'medical tourism India', 'surgery near me', 'piles treatment Delhi',
   ],
   openGraph: { type: 'website', locale: 'en_IN', siteName: 'MySurgery' },
   twitter: { card: 'summary_large_image' },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
+  alternates: { canonical: 'https://www.mysurgery.in' },
 }
 
 const organizationSchema = {
@@ -77,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <StickyCallButton />
+        <LeadPopup />
       </body>
     </html>
   )

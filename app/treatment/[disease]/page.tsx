@@ -1,3 +1,4 @@
+import BlogCTA from "@/components/forms/BlogCTA"
 import { getDiseaseBySlug, getAllDiseaseSlugs, getCityBySlug, cities } from "@/lib/diseases"
 import { getDoctorsForDisease } from "@/lib/doctors"
 import { notFound } from "next/navigation"
@@ -14,7 +15,7 @@ export async function generateMetadata(props: { params: Promise<{ disease: strin
   if (!disease) return {}
   const cityList = "Delhi, Gurugram, Noida, Mumbai, Bangalore & more"
   return {
-    title: disease.name + " Surgery in India | Cost 2026, Best Doctors & Hospitals | MySurgery",
+    title: disease.name + (!disease.name.includes('Surgery') && !disease.name.includes('Repair') ? " Surgery" : "") + " in India | Cost 2026, Best Doctors & Hospitals",
     description: disease.name + " surgery in India costs " + disease.costRange + ". " + disease.tagline + " NABH-accredited hospitals, insurance cashless, free expert consultation. Available in Delhi, Mumbai, Bangalore & 15+ cities.",
     keywords: disease.seoKeywords.join(", "),
     alternates: { canonical: "/treatment/" + slug },
@@ -183,6 +184,13 @@ export default async function DiseasePage(props: { params: Promise<{ disease: st
               </div>
             </section>
 
+            {d.slug === 'lasik' && (
+              <div style={{background: '#faf5ff', border: '1px solid #e9d5ff', borderRadius: '14px', padding: '18px 22px', marginBottom: '28px'}}>
+                <p style={{fontWeight: 700, color: '#7c3aed', fontSize: '15px', margin: '0 0 6px'}}>Comparing LASIK options?</p>
+                <p style={{fontSize: '13px', color: '#6b7280', margin: '0 0 12px'}}>See our complete comparison of LASIK, SMILE, SILK, Contoura Vision, PRK and ICL — with costs, pros, cons and eligibility.</p>
+                <a href='/lasik-comparison' style={{display: 'inline-block', background: '#7c3aed', color: 'white', fontWeight: 600, padding: '10px 20px', borderRadius: '8px', textDecoration: 'none', fontSize: '13px'}}>View Full Comparison →</a>
+              </div>
+            )}
             {(d.slug === 'piles' || d.slug === 'fissure' || d.slug === 'fistula') && (
               <div style={{background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '14px', padding: '18px 22px', marginBottom: '28px'}}>
                 <p style={{fontWeight: 700, color: '#1e3a8a', fontSize: '15px', margin: '0 0 6px'}}>Not sure what grade your piles are?</p>
@@ -197,6 +205,10 @@ export default async function DiseasePage(props: { params: Promise<{ disease: st
                 <a href='/circumcision-checker' style={{display: 'inline-block', background: '#16a34a', color: 'white', fontWeight: 600, padding: '10px 20px', borderRadius: '8px', textDecoration: 'none', fontSize: '13px'}}>Take Assessment →</a>
               </div>
             )}
+            <div style={{marginBottom: "32px"}}>
+              <BlogCTA procedure={d.name} />
+            </div>
+
             <section style={{marginBottom: "40px"}}>
               <h2 style={{fontSize: "26px", fontWeight: 700, color: "#0f1f35", marginBottom: "16px"}}>Top Surgeons for {d.name}</h2>
               <p style={{fontSize: "14px", color: "#6b7280", marginBottom: "20px"}}>Verified surgeons affiliated with partner hospitals. <a href="/doctors" style={{color: "#1d4ed8"}}>View all doctors →</a></p>
@@ -273,6 +285,25 @@ export default async function DiseasePage(props: { params: Promise<{ disease: st
           </div>
         </div>
       </div>
+    {/* RELATED BLOG POSTS — helps indexing of blog pages */}
+        <div style={{maxWidth: '900px', margin: '0 auto', padding: '0 24px 48px'}}>
+          <h2 style={{fontSize: '22px', fontWeight: 700, color: '#0f1f35', marginBottom: '16px'}}>Related Articles</h2>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '14px'}}>
+            {[
+              {title: 'Laser vs Open Surgery — Which Is Better?', slug: 'laser-vs-open-piles-surgery-which-is-better'},
+              {title: 'Hernia Surgery Cost in Delhi 2026', slug: 'hernia-surgery-cost-delhi-2026'},
+              {title: 'Is Surgery Covered by Insurance in India?', slug: 'hernia-surgery-insurance-india-2026'},
+              {title: 'LASIK Eye Surgery FAQ — 25 Questions Answered', slug: 'lasik-eye-surgery-faq-india-2026'},
+              {title: 'Piles Home Remedies — What Works', slug: 'piles-home-remedies'},
+              {title: 'Circumcision for Adults — What to Expect', slug: 'adult-circumcision-india-what-to-expect'},
+            ].map(item => (
+              <a key={item.slug} href={item.slug.startsWith('piles-home') ? '/piles-home-remedies' : '/blog/' + item.slug}
+                style={{background: 'white', border: '1px solid #e5e7eb', borderRadius: '10px', padding: '14px 16px', textDecoration: 'none', display: 'block'}}>
+                <p style={{fontSize: '14px', fontWeight: 500, color: '#1d4ed8', margin: 0, lineHeight: '1.5'}}>{item.title} →</p>
+              </a>
+            ))}
+          </div>
+        </div>
     </div>
   )
 }

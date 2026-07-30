@@ -1,11 +1,22 @@
 'use client'
-import { useState } from "react"
+import { useState, useEffect, Suspense } from "react"
+import { useSearchParams } from "next/navigation"
 
-export default function ContactPage() {
+function ContactForm() {
+  const searchParams = useSearchParams()
   const [phone, setPhone] = useState("")
   const [name, setName] = useState("")
+  const [city, setCity] = useState("")
+  const [procedure, setProcedure] = useState("")
   const [status, setStatus] = useState("")
   const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    const p = searchParams.get("procedure")
+    const c = searchParams.get("city")
+    if (p) setProcedure(p)
+    if (c) setCity(c)
+  }, [searchParams])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -15,7 +26,13 @@ export default function ContactPage() {
       const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, phone, procedure: "Not specified", city: "Not specified" }),
+        body: JSON.stringify({
+          name: name || "Contact Form",
+          phone,
+          procedure: procedure || "Not specified",
+          city: city || "Not specified",
+          sourcePage: document.referrer || window.location.href,
+        }),
       })
       const data = await res.json()
       if (data.success) setStatus("success")
@@ -27,7 +44,13 @@ export default function ContactPage() {
   return (
     <main style={{maxWidth: "520px", margin: "0 auto", padding: "48px 24px"}}>
       <h1 style={{fontSize: "30px", fontWeight: 700, color: "#111827", marginBottom: "8px"}}>Book Free Consultation</h1>
-      <p style={{color: "#6b7280", marginBottom: "32px"}}>Our care coordinator will call you back within 30 minutes.</p>
+      <p style={{color: "#6b7280", marginBottom: "8px"}}>Our care coordinator will call you back within 30 minutes.</p>
+      {(procedure || city) && (
+        <div style={{background: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "10px", padding: "12px 16px", marginBottom: "20px"}}>
+          {procedure && <p style={{fontSize: "14px", color: "#1e3a8a", margin: "0 0 2px"}}><strong>Procedure:</strong> {procedure}</p>}
+          {city && <p style={{fontSize: "14px", color: "#1e3a8a", margin: 0}}><strong>City:</strong> {city}</p>}
+        </div>
+      )}
 
       {status === "success" ? (
         <div style={{background: "#f0fdf4", border: "1px solid #86efac", borderRadius: "16px", padding: "40px", textAlign: "center"}}>
@@ -40,35 +63,21 @@ export default function ContactPage() {
           <form onSubmit={handleSubmit}>
             <div style={{marginBottom: "16px"}}>
               <label style={{fontSize: "13px", fontWeight: 500, color: "#374151", display: "block", marginBottom: "6px"}}>Your Name</label>
-              <input
-                type="text"
-                value={name}
-                onChange={e => setName(e.target.value)}
-                placeholder="e.g. Rahul Sharma"
-                style={{width: "100%", border: "1px solid #e5e7eb", borderRadius: "8px", padding: "12px 14px", fontSize: "15px", outline: "none", boxSizing: "border-box"}}
-              />
+              <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="e.g. Rahul Sharma"
+                style={{width: "100%", border: "1px solid #e5e7eb", borderRadius: "8px", padding: "12px 14px", fontSize: "15px", outline: "none", boxSizing: "border-box"}} />
             </div>
-            <div style={{marginBottom: "20px"}}>
+            <div style={{marginBottom: "16px"}}>
               <label style={{fontSize: "13px", fontWeight: 500, color: "#374151", display: "block", marginBottom: "6px"}}>Phone Number <span style={{color: "#dc2626"}}>*</span></label>
-              <input
-                type="tel"
-                value={phone}
-                onChange={e => setPhone(e.target.value)}
-                placeholder="+91 9XXXXXXXXX"
-                style={{width: "100%", border: status === "error" ? "1px solid #dc2626" : "1px solid #e5e7eb", borderRadius: "8px", padding: "12px 14px", fontSize: "15px", outline: "none", boxSizing: "border-box"}}
-              />
+              <input type="tel" value={phone} onChange={e => setPhone(e.target.value)} placeholder="+91 9XXXXXXXXX"
+                style={{width: "100%", border: status === "error" ? "1px solid #dc2626" : "1px solid #e5e7eb", borderRadius: "8px", padding: "12px 14px", fontSize: "15px", outline: "none", boxSizing: "border-box"}} />
               {status === "error" && <p style={{color: "#dc2626", fontSize: "12px", marginTop: "4px"}}>Please enter your phone number</p>}
             </div>
-            <button
-              type="submit"
-              disabled={loading}
-              style={{width: "100%", background: loading ? "#93c5fd" : "#1d4ed8", color: "white", fontWeight: 700, padding: "15px", borderRadius: "10px", border: "none", fontSize: "16px", cursor: loading ? "not-allowed" : "pointer"}}
-            >
+            <button type="submit" disabled={loading}
+              style={{width: "100%", background: loading ? "#93c5fd" : "#1d4ed8", color: "white", fontWeight: 700, padding: "15px", borderRadius: "10px", border: "none", fontSize: "16px", cursor: loading ? "not-allowed" : "pointer"}}>
               {loading ? "Calling you soon..." : "Get Free Callback →"}
             </button>
             <p style={{fontSize: "12px", color: "#9ca3af", textAlign: "center", marginTop: "12px"}}>🔒 Confidential · No spam · Callback in 30 mins</p>
           </form>
-
           <div style={{display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "10px", marginTop: "24px"}}>
             {[["10,000+","Patients helped"],["30 min","Callback time"],["Free","Consultation"]].map(([n,l]) => (
               <div key={l} style={{textAlign: "center", background: "#f9fafb", borderRadius: "8px", padding: "12px"}}>
@@ -79,11 +88,18 @@ export default function ContactPage() {
           </div>
         </div>
       )}
-
       <div style={{marginTop: "24px", textAlign: "center"}}>
         <p style={{fontSize: "14px", color: "#6b7280", marginBottom: "8px"}}>Prefer to call directly?</p>
-        <a href="tel:+918588967050" style={{fontSize: "24px", fontWeight: 700, color: "#1d4ed8", textDecoration: "none"}}>�� 8588967050</a>
+        <a href="tel:+918588967050" style={{fontSize: "24px", fontWeight: 700, color: "#1d4ed8", textDecoration: "none"}}>📞 8588967050</a>
       </div>
     </main>
+  )
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={<div style={{padding: "48px", textAlign: "center"}}>Loading...</div>}>
+      <ContactForm />
+    </Suspense>
   )
 }

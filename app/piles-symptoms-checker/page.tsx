@@ -111,7 +111,7 @@ export default function PilesSymptomsChecker() {
       await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: 'Symptoms Checker Lead', phone, procedure: 'Piles — ' + (result?.grade || ''), city: 'Not specified' }),
+        body: JSON.stringify({ name: 'Symptoms Checker Lead', phone, procedure: 'Piles — ' + (result?.grade || ''), city: 'Not specified', sourcePage: typeof window !== 'undefined' ? window.location.href : '/piles-symptoms-checker' }),
       })
       setLeadSent(true)
     } catch {}

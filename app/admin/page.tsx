@@ -320,7 +320,11 @@ export default function AdminDashboard() {
                         <div style={{background: '#fefce8', border: '1px solid #fcd34d', borderRadius: '6px', padding: '3px 8px', color: '#92400e', lineHeight: '1.4', wordBreak: 'break-word'}}>{lead.notes}</div>
                       ) : <span style={{color: '#d1d5db'}}>—</span>}
                     </td>
-                    <td style={{padding: '10px 12px', fontSize: '11px', color: '#9ca3af', whiteSpace: 'nowrap'}}>{lead.source || 'web'}</td>
+                    <td style={{padding: '10px 12px', maxWidth: '200px'}}>
+                      <div style={{background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '6px', padding: '4px 8px', fontSize: '11px', fontWeight: 600, color: '#1e40af', wordBreak: 'break-word', lineHeight: '1.4'}}>
+                        📍 {lead.source || 'Direct'}
+                      </div>
+                    </td>
                     <td style={{padding: '10px 12px', whiteSpace: 'nowrap'}}>
                       <div style={{display: 'flex', gap: '5px'}}>
                         <button onClick={() => setEditing({ ...lead })} style={{fontSize: '11px', padding: '5px 9px', borderRadius: '6px', border: '1px solid #e5e7eb', background: '#eff6ff', color: '#1d4ed8', cursor: 'pointer'}}>Edit</button>

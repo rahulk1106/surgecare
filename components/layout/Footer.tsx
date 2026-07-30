@@ -55,7 +55,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{borderTop: "1px solid #1f2937", paddingTop: "24px"}}>
           <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px", marginBottom: "16px"}}>
-            <p style={{fontSize: "13px", color: "#4b5563", margin: 0}}>© 2026 MySurgery. All rights reserved.</p>
+            <p style={{fontSize: "13px", color: "#4b5563", margin: 0}}>© 2026  MySurgery. All rights reserved.</p>
           </div>
           <div style={{display: "flex", gap: "20px", flexWrap: "wrap", marginBottom: "12px"}}>
             <a href="/privacy-policy" style={{fontSize: "13px", color: "#6b7280", textDecoration: "none"}}>Privacy Policy</a>
@@ -65,7 +65,7 @@ export default function Footer() {
             <a href="/community" style={{fontSize: "13px", color: "#6b7280", textDecoration: "none"}}>Patient Community</a>
           </div>
           <p style={{fontSize: "12px", color: "#4b5563", margin: 0, lineHeight: "1.6"}}>
-            Disclaimer: Doctors listed on MySurgery are sourced from publicly available information and are not employed by or affiliated with MySurgery. MySurgery is an information directory and patient facilitation platform, not a medical service provider. Always consult a registered medical practitioner before making any medical decision.
+            Disclaimer: Doctors listed on MySurgery are sourced from publicly available information and are not employed by or affiliated with MySurgery. MySurgery is a Health Tech lead generation and patient facilitation platform operated by Gravity Labs (Proprietorship). Not a medical service provider. DPDP Act 2023 Compliant. Always consult a registered medical practitioner before making any medical decision.
           </p>
         </div>
       </div>

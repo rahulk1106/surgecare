@@ -1,172 +1,163 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | MySurgery by Retaingrow Technologies',
-  description: 'Privacy Policy for MySurgery — how Retaingrow Technologies collects, uses, shares, and protects your personal and medical information.',
+  title: 'Privacy Policy | MySurgery by Gravity Labs',
+  description: 'Privacy Policy for MySurgery by Gravity Labs — DPDP Act 2023 compliant. How we collect, use, share, and protect your personal data.',
   alternates: { canonical: '/privacy-policy' },
 }
 
 export default function PrivacyPolicyPage() {
   const sections = [
     {
-      title: '1. About MySurgery and Retaingrow Technologies',
-      body: `MySurgery (mysurgery.in) is operated by Retaingrow Technologies LLP. We are a marketing and lead facilitation company — NOT a medical company, hospital, or healthcare service provider.
+      title: '1. About Us',
+      body: `MySurgery (www.mysurgery.in) is operated by Gravity Labs (Proprietorship). We are a Health Tech company engaged in lead generation, patient facilitation, and business development services leveraging AI and technology to connect patients with India's leading hospitals and Healthcare Partners.
 
-We connect patients with independent registered Healthcare Partners (doctors, hospitals, and clinics) through referral and facilitation services. All medical treatment is provided by independent Healthcare Partners, not by MySurgery or Retaingrow Technologies.
+This Privacy Policy explains how we collect, use, share, and protect your personal data in compliance with India's Digital Personal Data Protection Act (DPDP Act), 2023 and other applicable Indian laws.
 
-This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our platform.`,
+Data Fiduciary: Gravity Labs (Proprietorship)
+Contact: info.mysurgery@gmail.com | 8588967050`,
     },
     {
       title: '2. Information We Collect',
-      body: `We collect the following categories of information:
+      body: `We collect the following personal data:
 
-Contact Information: Name, phone number, and email address when you submit a consultation request or register on the platform.
+Contact Information: Name, phone number, and email address when you submit a consultation form, call us, WhatsApp us, or interact with any of our advertisements on social media platforms.
 
-Medical Information: General information about the surgical procedure or condition you are enquiring about, provided voluntarily by you. We do not collect detailed medical records unless you choose to share them.
+Medical Information: General information about the surgical procedure or condition you are enquiring about, voluntarily provided by you or shared during conversation with our care managers.
 
-Usage Data: Pages visited, time spent, browser type, device type, and approximate location (city level) through cookies and analytics tools.
+Communication Data: Records of calls, WhatsApp messages, and form submissions for quality and training purposes.
 
-Community Content: Questions, answers, and comments posted in the MySurgery community forum.
+Usage Data: Pages visited, browser type, device type, and approximate location through cookies and analytics.
 
-Partner Referral Data: If you register as a referral partner, we collect your name, phone, city, and bank/UPI details for commission payments.
+Referral Partner Data: If you register as a referral partner — name, phone, city, and bank/UPI details for commission payments.
 
-We do NOT collect your Aadhaar number, PAN card, financial account details, or government identification unless explicitly required and consented to.`,
+We do NOT collect Aadhaar numbers, PAN cards, financial account details, or government identification unless explicitly required and consented to.`,
     },
     {
-      title: '3. How We Use Your Information',
-      body: `We use your information for the following purposes:
+      title: '3. Lawful Basis and Consent under DPDP Act, 2023',
+      body: `Under the Digital Personal Data Protection Act (DPDP Act), 2023, we process your personal data on the following lawful bases:
 
-Facilitation: To connect you with registered Healthcare Partners based on your medical inquiry. This is our primary purpose.
+(a) CONSENT (Primary Basis — Section 6, DPDP Act): By interacting with our website, social media ads, care managers via call/WhatsApp/form, you give your free, informed, specific, and unambiguous consent to:
+- Collection of your personal data by Gravity Labs / MySurgery
+- Processing of your data for patient facilitation and appointment booking
+- Sharing of your data with Healthcare Partners for treatment facilitation
 
-Communication: To call or WhatsApp you in response to your consultation request. We will only contact you on the number you provide.
+(b) LEGITIMATE USE (Section 7, DPDP Act): Processing necessary for the specific service you have requested — connecting you with a Healthcare Partner.
 
-Data Sharing with Healthcare Partners: Your name, phone number, and general medical inquiry will be shared with one or more Healthcare Partners as necessary to facilitate your consultation. See Section 5 for full details.
-
-Service Improvement: To understand how users interact with the platform and improve our content and services.
-
-Marketing Communications: With your consent, to send relevant health information, procedure updates, and promotional messages. You may opt out at any time.
-
-Legal Compliance: To comply with applicable Indian laws including the Information Technology Act 2000 and the Digital Personal Data Protection Act 2023.`,
+Your consent is recorded at the point of data submission. You may withdraw consent at any time by emailing info.mysurgery@gmail.com.`,
     },
     {
-      title: '4. Your Consent to Data Collection and Sharing',
-      body: `By submitting any form, calling, WhatsApp messaging, or otherwise providing your information on MySurgery, you expressly consent to:
+      title: '4. How We Use Your Information',
+      body: `We use your personal data for the following purposes:
 
-(a) Collection of your personal and medical information by Retaingrow Technologies / MySurgery.
+Patient Facilitation (Primary Purpose): Our care managers call you to understand your medical requirements and connect you with suitable Healthcare Partners — partner hospitals and doctors.
 
-(b) Sharing of your name, phone number, city, and medical inquiry with MySurgery's Healthcare Partners for the purpose of facilitating your medical consultation.
+Appointment Booking: To facilitate booking of consultations and follow-up appointments at partner hospitals and with partner doctors.
 
-(c) Healthcare Partners contacting you directly by phone or WhatsApp to discuss your medical requirements.
+Data Sharing with Healthcare Partners: Your name, phone, city, and general medical enquiry are shared with one or more Healthcare Partners to enable them to provide better treatment to you.
 
-You understand that:
-— MySurgery may share your information with more than one Healthcare Partner to find the most suitable provider
-— Healthcare Partners are independent entities responsible for their own data protection practices
-— You indemnify Retaingrow Technologies from any harm, misuse, or breach of data by Healthcare Partners
+Service Improvement: To improve our platform, content, and care manager services using AI and technology.
 
-You may withdraw consent at any time by emailing info.mysurgery@gmail.com. Withdrawal will prevent further facilitation services from being provided.`,
+Marketing Communications: With your consent, to send relevant health information and promotional messages. You may opt out at any time.
+
+Call Recording: Calls with our care managers may be recorded for quality assurance and training. By continuing a call, you consent to recording.
+
+Legal Compliance: To comply with applicable Indian laws including the DPDP Act, 2023 and IT Act, 2000.`,
     },
     {
-      title: '5. Sharing of Your Information',
-      body: `We share your information in the following circumstances:
+      title: '5. Sharing of Your Data with Healthcare Partners',
+      body: `IMPORTANT — DATA SHARING IS CORE TO OUR SERVICE:
 
-With Healthcare Partners: When you request a consultation, your name, phone number, city, and general medical inquiry are shared with relevant Healthcare Partners (hospitals, clinics, and doctors) to facilitate your appointment. This is the primary purpose for which your data is collected.
+When you interact with MySurgery and request a consultation or appointment, your personal data (name, phone number, city, and medical enquiry) is shared with one or more of our partner hospitals and partner doctors to facilitate your medical consultation and treatment.
 
-With Service Providers: We use third-party technology services including MongoDB Atlas (database), Twilio (SMS/WhatsApp notifications), Google Analytics (usage analytics), and Vercel (website hosting). These providers process data on our behalf.
+This data sharing is:
+- Covered by your consent given at the time of interaction
+- Necessary for the service you have requested
+- Limited to Healthcare Partners who are bound by confidentiality obligations
 
-With Referral Partners: If you were referred to MySurgery by a registered partner, we may confirm conversion status (without sharing your detailed medical information) to facilitate commission payment.
+We also share data with:
+- Technology Service Providers: MongoDB Atlas (database, India region), Twilio (communications), Google Analytics, Vercel (hosting)
+- Legal Authorities: If required by court order or government directive
 
-For Legal Requirements: We may disclose information if required by a court order, law enforcement, or government authority.
+We do NOT sell your personal data to third parties for advertising purposes.
 
-We do NOT sell, rent, or trade your personal information to third parties for their own marketing purposes. We do NOT share your information with insurance companies or pharmaceutical companies without your explicit consent.`,
+You indemnify Gravity Labs from any claim arising from the data practices of Healthcare Partners with whom your data has been shared.`,
     },
     {
-      title: '6. Doctor and Hospital Directory — Data Sources',
-      body: `Doctor profiles and hospital information displayed on MySurgery are compiled from publicly available sources including hospital websites, NMC (National Medical Commission) records, and professional directories.
+      title: '6. Your Rights under DPDP Act, 2023',
+      body: `Under India's Digital Personal Data Protection Act (DPDP Act), 2023, you have the following rights:
 
-Important:
-— Listed doctors and hospitals are NOT employees or affiliates of MySurgery
-— They have not necessarily authorised or approved their listing
-— MySurgery does not verify current credentials or practice status
-— Doctors may request removal by emailing info.mysurgery@gmail.com (processed within 7 business days)
+Right to Access (Section 11): Request a summary of personal data processed by us and the purposes for which it is processed.
 
-MySurgery displays this information as a public directory service, similar to how search engines index publicly available information.`,
+Right to Correction and Erasure (Section 12): Request correction of inaccurate or incomplete personal data, or erasure of data where the purpose of processing is no longer valid.
+
+Right to Grievance Redressal (Section 13): Raise complaints with our Grievance Officer. We will respond within 30 days.
+
+Right to Nominate (Section 14): Nominate another individual to exercise your rights on your behalf in the event of death or incapacity.
+
+Right to Withdraw Consent (Section 6): Withdraw your consent for data processing at any time. Withdrawal will prevent further facilitation services.
+
+Right to Data Deletion: Request deletion of all your personal data from our systems. Use our Data Deletion Request form at mysurgery.in/data-deletion-request.
+
+To exercise any of the above rights, email info.mysurgery@gmail.com with subject "DPDP Rights Request" or use our data deletion portal.`,
     },
     {
-      title: '7. Confidentiality for Sensitive Procedures',
-      body: `MySurgery handles enquiries about sensitive medical procedures — including MTP (abortion), circumcision, penile implant, reproductive health, and mental health — with the highest level of confidentiality.
+      title: '7. Data Security and Storage',
+      body: `We implement industry-standard security measures:
 
-For sensitive procedure enquiries:
-— We only call on the number you provide
-— We do not reveal the nature of your enquiry to anyone without your consent
-— We do not store detailed medical history beyond what is necessary for the consultation
-— Our care coordinators are trained in confidentiality protocols
+- SSL/TLS encryption for all data transmission
+- MongoDB Atlas database (Mumbai, India) with role-based access controls
+- Limited staff access to personal data on need-to-know basis
+- Regular security reviews and access audits
+- Data stored in India in compliance with data localisation requirements
 
-We never share sensitive procedure enquiry details with your family, employer, or any third party without your explicit consent.`,
+Data Retention: We retain personal data for as long as necessary for the stated purpose — typically 3 years from last interaction — or as required by applicable law. After this period, data is deleted or anonymised.
+
+Breach Notification: In the event of a data breach, we will notify affected users and the Data Protection Board of India within the timeframe required by the DPDP Act, 2023.`,
     },
     {
-      title: '8. Data Security',
-      body: `We implement industry-standard security measures including:
-— SSL/TLS encryption for all data transmission
-— Secure MongoDB Atlas database with role-based access controls
-— Limited staff access to personal data on a need-to-know basis
-— Regular security reviews
+      title: '8. Confidentiality for Sensitive Medical Enquiries',
+      body: `MySurgery handles enquiries about sensitive medical procedures — including MTP (abortion), circumcision, reproductive health, sexual health, and mental health — with the highest level of confidentiality.
 
-However, no internet transmission is 100% secure. We cannot guarantee absolute security. In the event of a data breach affecting your personal information, we will notify you within 72 hours as required by applicable law.`,
+For sensitive enquiries:
+- We only call on the number you provide
+- We do not reveal the nature of your enquiry to anyone without your consent
+- Care managers are trained in confidentiality protocols
+- We never share sensitive enquiry details with family, employer, or third parties without your explicit consent`,
     },
     {
-      title: '9. Your Rights Under Indian Law',
-      body: `Under the Digital Personal Data Protection Act 2023 (DPDPA) and other applicable Indian laws, you have the following rights:
+      title: '9. Cookies and Tracking',
+      body: `We use cookies and similar technologies to:
+- Remember your preferences and improve user experience
+- Analyse website traffic via Google Analytics
+- Track campaign performance from social media advertisements
 
-Right to Access: Request a copy of the personal data we hold about you.
-Right to Correction: Request correction of inaccurate personal data.
-Right to Erasure: Request deletion of your personal data, subject to legal obligations.
-Right to Withdraw Consent: Withdraw consent for data processing at any time.
-Right to Grievance Redressal: Raise a complaint about how your data is processed.
-Right to Nominate: Nominate another person to exercise these rights on your behalf in the event of death or incapacity.
-
-To exercise any of these rights, contact our Grievance Officer at info.mysurgery@gmail.com. We will respond within 30 days.`,
+You can disable non-essential cookies in your browser settings. We do not use cookies to track your medical searches for advertising to third parties.`,
     },
     {
-      title: '10. No Liability for Healthcare Partner Data Practices',
-      body: `When your information is shared with Healthcare Partners, those partners become independent data controllers for the information they receive.
+      title: '10. Children Privacy',
+      body: `MySurgery does not knowingly collect personal data from children under 18 without parental or guardian consent. For procedures involving minors, we require a parent or legal guardian to provide consent and data.
 
-Retaingrow Technologies / MySurgery has no control over, and no liability for, the data protection practices of Healthcare Partners. You should review the privacy policies of any Healthcare Partner before sharing additional personal or medical information directly with them.
-
-You expressly indemnify Retaingrow Technologies from any claim, loss, or harm arising from the data practices of any Healthcare Partner with whom your information has been shared.`,
+If you believe we have inadvertently collected data from a minor without consent, please contact us immediately at info.mysurgery@gmail.com.`,
     },
     {
-      title: '11. Cookies and Tracking',
-      body: `We use cookies and similar technologies to remember your preferences, analyse website traffic via Google Analytics, and improve user experience.
-
-You can disable cookies in your browser settings. We do not use cookies to track your medical searches for advertising purposes.`,
+      title: '11. Changes to This Policy',
+      body: `We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. The updated policy will be posted on this page with the revision date. Continued use of MySurgery after changes constitutes acceptance.`,
     },
     {
-      title: '12. Medical Information Disclaimer',
-      body: `All medical information on MySurgery is for general informational purposes only. It does NOT constitute medical advice, diagnosis, or treatment recommendation.
+      title: '12. Grievance Officer / Data Protection Officer',
+      body: `For privacy queries, DPDP Act rights requests, data deletion, or complaints:
 
-Cost ranges and procedure information are approximate. Always consult a qualified registered medical practitioner before making medical decisions. MySurgery is not responsible for any decisions made based on information found on this website.`,
-    },
-    {
-      title: '13. Children\'s Privacy',
-      body: `MySurgery does not knowingly collect personal information from children under 18 without parental or guardian consent. For procedures involving minors, we require a parent or legal guardian to provide consent.
-
-If you believe we have inadvertently collected information from a minor without consent, please contact us immediately at info.mysurgery@gmail.com.`,
-    },
-    {
-      title: '14. Changes to This Policy',
-      body: `We may update this Privacy Policy from time to time. The updated policy will be posted on this page with the revision date. Continued use of MySurgery after changes constitutes acceptance of the updated policy.`,
-    },
-    {
-      title: '15. Contact and Grievance Officer',
-      body: `For privacy-related queries, data requests, or complaints:
-
-Retaingrow Technologies LLP (operating as MySurgery)
+Gravity Labs (Proprietorship) operating as MySurgery
 Email: info.mysurgery@gmail.com
 Phone: 8588967050
 Website: www.mysurgery.in
 
-Grievance Officer: Data Protection and Compliance Team
-Response time: Within 30 days of receipt of complaint.`,
+Grievance Officer / Data Protection Officer: Compliance Team, Gravity Labs
+Response time: Within 30 days.
+
+Data Deletion Requests: mysurgery.in/data-deletion-request
+Doctor/Hospital Profile Removal: Email with subject "Profile Removal Request"`,
     },
   ]
 
@@ -174,24 +165,19 @@ Response time: Within 30 days of receipt of complaint.`,
     <div style={{fontFamily: 'system-ui,-apple-system,sans-serif', maxWidth: '860px', margin: '0 auto', padding: '48px 24px 80px'}}>
       <div style={{marginBottom: '32px'}}>
         <h1 style={{fontSize: '36px', fontWeight: 700, color: '#0f1f35', marginBottom: '8px'}}>Privacy Policy</h1>
-        <p style={{fontSize: '14px', color: '#6b7280', marginBottom: '2px'}}>Last updated: May 2026</p>
-        <p style={{fontSize: '14px', color: '#6b7280'}}>Effective date: January 2024 · Operated by Retaingrow Technologies LLP</p>
+        <p style={{fontSize: '14px', color: '#6b7280', marginBottom: '2px'}}>Last updated: July 2026 · DPDP Act 2023 Compliant</p>
+        <p style={{fontSize: '14px', color: '#6b7280'}}>Gravity Labs (Proprietorship) operating as MySurgery</p>
       </div>
 
-      {/* KEY NOTICE */}
       <div style={{background: '#fef3c7', border: '1px solid #fcd34d', borderRadius: '12px', padding: '18px 22px', marginBottom: '20px'}}>
         <p style={{fontWeight: 600, color: '#92400e', margin: '0 0 6px', fontSize: '15px'}}>⚠️ How We Use Your Data — Summary</p>
-        <p style={{color: '#92400e', fontSize: '14px', lineHeight: '1.7', margin: '0 0 6px'}}>
-          When you submit your details on MySurgery, your name, phone, and medical enquiry are shared with independent Healthcare Partners (hospitals and doctors) to arrange your consultation. This is our core service.
-        </p>
-        <p style={{color: '#92400e', fontSize: '13px', margin: 0}}>
-          MySurgery is a marketing company — not a medical company. Healthcare Partners are independent entities. Read Sections 4 and 5 for full details on data sharing.
-        </p>
+        <p style={{color: '#92400e', fontSize: '14px', lineHeight: '1.7', margin: '0 0 6px'}}>When you submit your details on MySurgery — through forms, calls, WhatsApp, or social media ads — your name, phone, and medical enquiry are shared with our partner hospitals and doctors to arrange your consultation. This is our core service.</p>
+        <p style={{color: '#92400e', fontSize: '13px', margin: 0}}>MySurgery is a Health Tech lead generation company operated by Gravity Labs — not a medical company. Healthcare Partners are independent entities.</p>
       </div>
 
-      <div style={{background: '#f0f9ff', border: '1px solid #bae6fd', borderRadius: '12px', padding: '16px 20px', marginBottom: '40px'}}>
-        <p style={{fontWeight: 600, color: '#0c4a6e', margin: '0 0 4px', fontSize: '14px'}}>🔒 Doctor Listing Notice</p>
-        <p style={{color: '#0c4a6e', fontSize: '13px', lineHeight: '1.6', margin: 0}}>Doctor profiles are compiled from publicly available information. Listed doctors are NOT affiliated with MySurgery. Any doctor may request removal by emailing info.mysurgery@gmail.com.</p>
+      <div style={{background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '12px', padding: '16px 20px', marginBottom: '40px'}}>
+        <p style={{fontWeight: 600, color: '#1e3a8a', margin: '0 0 4px', fontSize: '14px'}}>🔒 DPDP Act 2023 Compliant</p>
+        <p style={{color: '#1e3a8a', fontSize: '13px', margin: 0}}>Your data rights under India's Digital Personal Data Protection Act, 2023 are protected. Request data deletion at <a href="/data-deletion-request" style={{color: '#1d4ed8'}}>mysurgery.in/data-deletion-request</a>.</p>
       </div>
 
       {sections.map((section, i) => (

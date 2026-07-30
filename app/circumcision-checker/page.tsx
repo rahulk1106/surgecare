@@ -116,7 +116,7 @@ export default function CircumcisionChecker() {
       await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: 'Circumcision Checker Lead', phone, procedure: 'Circumcision — ' + (result?.title || ''), city: 'Not specified' }),
+        body: JSON.stringify({ name: 'Circumcision Checker Lead', phone, procedure: 'Circumcision — ' + (result?.title || ''), city: 'Not specified', sourcePage: typeof window !== 'undefined' ? window.location.href : '/circumcision-checker' }),
       })
       setLeadSent(true)
     } catch {}

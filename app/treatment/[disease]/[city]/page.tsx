@@ -1,3 +1,4 @@
+import CityLeadForm from "@/components/forms/CityLeadForm"
 import { getDiseaseBySlug, getAllDiseaseSlugs, getCityBySlug, cities, getAllCitySlugs } from "@/lib/diseases"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
@@ -22,8 +23,9 @@ export async function generateMetadata(props: { params: Promise<{ disease: strin
   const disease = getDiseaseBySlug(slug)
   const city = getCityBySlug(citySlug)
   if (!disease || !city) return {}
+  const needsSurgery = !disease.name.includes('Surgery') && !disease.name.includes('Repair')
   return {
-    title: disease.name + " Surgery Cost in " + city.name + " 2026 | Best Hospitals & Doctors | MySurgery",
+    title: disease.name + (needsSurgery ? " Surgery" : "") + " Cost in " + city.name + " 2026 | Best Hospitals & Doctors",
     description: disease.name + " surgery cost in " + city.name + " is " + disease.costRange + ". Insurance cashless at top NABH hospitals. Same-day discharge available. Free expert consultation — callback in 30 mins.",
     alternates: { canonical: "/treatment/" + slug + "/cost-" + citySlug },
   }
@@ -44,7 +46,7 @@ export default async function CostCityPage(props: { params: Promise<{ disease: s
     mainEntity: [
       { "@type": "Question", name: "How much does " + d.name + " cost in " + c.name + "?", acceptedAnswer: { "@type": "Answer", text: d.name + " surgery in " + c.name + " costs " + d.costRange + ". MySurgery provides transparent pricing before you commit." } },
       { "@type": "Question", name: "Is " + d.name + " covered by insurance in " + c.name + "?", acceptedAnswer: { "@type": "Answer", text: d.insuranceCovered ? "Yes. " + d.name + " is covered by all major health insurance policies. MySurgery helps with cashless claims at partner hospitals in " + c.name + "." : "This procedure is usually not covered by insurance. MySurgery provides transparent pricing and EMI options." } },
-      ...d.faqs.map(f => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
+      ...d.faqs.map(f => ({ "@type": "Question", name: f.question.replace(/\bDelhi(?:-NCR)?\b/g, c.name), acceptedAnswer: { "@type": "Answer", text: f.answer.replace(/\bDelhi(?:-NCR)?\b/g, c.name) } })),
     ],
   }
 
@@ -68,10 +70,11 @@ export default async function CostCityPage(props: { params: Promise<{ disease: s
                 <p style={{fontSize: "13px", color: "#6b7280", margin: 0}}>in {c.name}, {c.state} · 2026</p>
               </div>
               <p style={{fontSize: "16px", color: "#4b5563", lineHeight: "1.7", marginBottom: "24px"}}>{d.name} surgery in {c.name} costs {d.costRange}. The exact cost depends on hospital, surgeon experience, and anaesthesia type. MySurgery provides transparent pricing with no hidden charges.</p>
-              <div style={{display: "flex", gap: "12px", flexWrap: "wrap"}}>
-                <a href="/contact" style={{background: "#1d4ed8", color: "white", fontWeight: 600, padding: "13px 24px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>Get Exact Cost Estimate</a>
-                <a href="https://wa.me/918588967050" target="_blank" rel="noopener noreferrer" style={{background: "#22c55e", color: "white", fontWeight: 600, padding: "13px 24px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>WhatsApp Us</a>
-              </div>
+              <CityLeadForm
+                procedure={d.name + " — " + c.name}
+                city={c.name}
+                sourcePage={"/treatment/" + slug + "/" + rawCity}
+              />
             </div>
             <div style={{background: "white", borderRadius: "16px", padding: "24px", boxShadow: "0 8px 32px rgba(0,0,0,0.08)"}}>
               <p style={{fontSize: "14px", fontWeight: 600, color: "#374151", marginBottom: "16px"}}>Cost breakdown</p>
@@ -112,12 +115,16 @@ export default async function CostCityPage(props: { params: Promise<{ disease: s
             <h3 style={{fontSize: "15px", fontWeight: 600, color: "#111827", marginBottom: "8px"}}>Is {d.name} covered by insurance in {c.name}?</h3>
             <p style={{fontSize: "14px", color: "#4b5563", lineHeight: "1.7", margin: 0}}>{d.insuranceCovered ? "Yes. " + d.name + " is covered by all major health insurance policies. MySurgery partner hospitals in " + c.name + " offer cashless treatment." : "This procedure is usually not covered by insurance. MySurgery provides EMI options and transparent pricing."}</p>
           </div>
-          {d.faqs.map((faq, i) => (
-            <div key={i} style={{border: "1px solid #e5e7eb", borderRadius: "10px", padding: "18px 20px", marginBottom: "10px"}}>
-              <h3 style={{fontSize: "15px", fontWeight: 600, color: "#111827", marginBottom: "8px"}}>{faq.question}</h3>
-              <p style={{fontSize: "14px", color: "#4b5563", lineHeight: "1.7", margin: 0}}>{faq.answer}</p>
-            </div>
-          ))}
+          {d.faqs.map((faq, i) => {
+            const question = faq.question.replace(/\bDelhi(?:-NCR)?\b/g, c.name)
+            const answer = faq.answer.replace(/\bDelhi(?:-NCR)?\b/g, c.name)
+            return (
+              <div key={i} style={{border: "1px solid #e5e7eb", borderRadius: "10px", padding: "18px 20px", marginBottom: "10px"}}>
+                <h3 style={{fontSize: "15px", fontWeight: 600, color: "#111827", marginBottom: "8px"}}>{question}</h3>
+                <p style={{fontSize: "14px", color: "#4b5563", lineHeight: "1.7", margin: 0}}>{answer}</p>
+              </div>
+            )
+          })}
         </section>
 
         <section style={{marginBottom: "48px"}}>
@@ -134,10 +141,22 @@ export default async function CostCityPage(props: { params: Promise<{ disease: s
 
         <div style={{background: "#0f1f35", borderRadius: "16px", padding: "48px", textAlign: "center"}}>
           <h2 style={{fontSize: "28px", fontWeight: 700, color: "white", marginBottom: "12px"}}>Get Exact Cost for {d.name} in {c.name}</h2>
-          <p style={{color: "#93c5fd", marginBottom: "32px", fontSize: "16px"}}>Free consultation. Transparent pricing. Insurance handled. Callback in 30 minutes.</p>
+          <p style={{color: "#93c5fd", marginBottom: "32px", fontSize: "16px"}}>Free consultation. Transparent pricing. {d.insuranceCovered ? "Insurance handled." : "EMI available."} Callback in 30 minutes.</p>
           <div style={{display: "flex", gap: "14px", justifyContent: "center", flexWrap: "wrap"}}>
             <a href="/contact" style={{background: "#1d4ed8", color: "white", fontWeight: 600, padding: "14px 28px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>Book Free Consultation</a>
             <a href="https://wa.me/918588967050" target="_blank" rel="noopener noreferrer" style={{background: "#22c55e", color: "white", fontWeight: 600, padding: "14px 28px", borderRadius: "10px", textDecoration: "none", fontSize: "15px"}}>WhatsApp Us</a>
+          </div>
+        </div>
+      {/* INLINE LEAD FORM with city pre-filled */}
+        <div style={{background: "linear-gradient(135deg, #0f1f35 0%, #1d4ed8 100%)", borderRadius: "20px", padding: "36px", marginBottom: "48px"}}>
+          <h2 style={{fontSize: "24px", fontWeight: 700, color: "white", marginBottom: "8px"}}>Get Exact {d.name} Cost in {c.name}</h2>
+          <p style={{color: "#93c5fd", marginBottom: "24px", fontSize: "15px"}}>Free callback within 30 minutes. Transparent pricing. No hidden charges.</p>
+          <div style={{maxWidth: "420px"}}>
+            <CityLeadForm
+              procedure={d.name + " — " + c.name}
+              city={c.name}
+              sourcePage={"/treatment/" + slug + "/" + rawCity}
+            />
           </div>
         </div>
       </div>

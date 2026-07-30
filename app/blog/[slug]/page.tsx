@@ -173,6 +173,27 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
             <a href="/blog" style={{display: 'inline-block', marginTop: '20px', fontSize: '14px', color: '#1d4ed8', textDecoration: 'none', fontWeight: 500}}>← View all articles</a>
           </div>
         )}
+      {/* INTERNAL LINKS TO TREATMENT PAGES */}
+        <div style={{background: '#f9fafb', borderRadius: '14px', padding: '24px', marginTop: '32px'}}>
+          <h3 style={{fontSize: '16px', fontWeight: 700, color: '#111827', marginBottom: '14px'}}>See Also — Treatment Guides</h3>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px'}}>
+            {[
+              {name: 'Piles Treatment', slug: 'piles'},
+              {name: 'Hernia Surgery', slug: 'hernia'},
+              {name: 'Circumcision', slug: 'circumcision'},
+              {name: 'LASIK Eye Surgery', slug: 'lasik'},
+              {name: 'Knee Replacement', slug: 'knee-replacement'},
+              {name: 'MTP / Abortion', slug: 'mtp-abortion'},
+              {name: 'Gallstones Surgery', slug: 'gallstones'},
+              {name: 'Kidney Stones', slug: 'kidney-stones'},
+            ].map(t => (
+              <a key={t.slug} href={'/treatment/' + t.slug}
+                style={{background: 'white', border: '1px solid #e5e7eb', borderRadius: '8px', padding: '10px 14px', textDecoration: 'none', fontSize: '13px', fontWeight: 500, color: '#1d4ed8', display: 'block'}}>
+                {t.name} →
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )

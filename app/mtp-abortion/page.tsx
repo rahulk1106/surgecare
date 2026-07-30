@@ -193,6 +193,64 @@ export default function MTPPage() {
           <p style={{color: '#64748b', fontSize: '13px', marginTop: '20px'}}>Available 9am – 9pm · All calls confidential · Female doctors available</p>
         </div>
       </div>
+
+      {/* CITY LINKS — helps Google index all MTP city pages */}
+      <div style={{maxWidth: '900px', margin: '0 auto', padding: '0 24px 60px'}}>
+        <h2 style={{fontSize: '24px', fontWeight: 700, color: '#0f1f35', marginBottom: '8px', textAlign: 'center'}}>MTP / Abortion Cost by City</h2>
+        <p style={{fontSize: '15px', color: '#6b7280', textAlign: 'center', marginBottom: '24px'}}>Find MTP cost, doctors, and hospitals in your city</p>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px', marginBottom: '32px'}}>
+          {[
+            {city: 'Delhi', slug: 'delhi', cost: 'Rs 3,500 – Rs 18,000'},
+            {city: 'Gurugram', slug: 'gurugram', cost: 'Rs 4,000 – Rs 20,000'},
+            {city: 'Noida', slug: 'noida', cost: 'Rs 3,500 – Rs 18,000'},
+            {city: 'Mumbai', slug: 'mumbai', cost: 'Rs 5,000 – Rs 22,000'},
+            {city: 'Bangalore', slug: 'bangalore', cost: 'Rs 4,500 – Rs 20,000'},
+            {city: 'Chennai', slug: 'chennai', cost: 'Rs 4,000 – Rs 18,000'},
+            {city: 'Kochi', slug: 'kochi', cost: 'Rs 3,500 – Rs 16,000'},
+            {city: 'Pune', slug: 'pune', cost: 'Rs 4,000 – Rs 18,000'},
+            {city: 'Hyderabad', slug: 'hyderabad', cost: 'Rs 4,000 – Rs 18,000'},
+            {city: 'Lucknow', slug: 'lucknow', cost: 'Rs 3,000 – Rs 15,000'},
+            {city: 'Ahmedabad', slug: 'ahmedabad', cost: 'Rs 3,500 – Rs 16,000'},
+            {city: 'Indore', slug: 'indore', cost: 'Rs 3,000 – Rs 14,000'},
+            {city: 'Patna', slug: 'patna', cost: 'Rs 2,500 – Rs 12,000'},
+            {city: 'Ranchi', slug: 'ranchi', cost: 'Rs 2,500 – Rs 12,000'},
+            {city: 'Bhubaneswar', slug: 'bhubaneswar', cost: 'Rs 3,000 – Rs 14,000'},
+            {city: 'Raipur', slug: 'raipur', cost: 'Rs 2,500 – Rs 12,000'},
+            {city: 'Vizag', slug: 'vizag', cost: 'Rs 3,000 – Rs 14,000'},
+            {city: 'Vijayawada', slug: 'vijayawada', cost: 'Rs 3,000 – Rs 14,000'},
+            {city: 'Coimbatore', slug: 'coimbatore', cost: 'Rs 3,000 – Rs 14,000'},
+            {city: 'Madurai', slug: 'madurai', cost: 'Rs 2,500 – Rs 12,000'},
+            {city: 'Trivandrum', slug: 'trivandrum', cost: 'Rs 3,000 – Rs 15,000'},
+          ].map(c => (
+            <a key={c.slug} href={'/treatment/mtp-abortion/' + c.slug}
+              style={{background: 'white', border: '1px solid #e5e7eb', borderRadius: '12px', padding: '14px 16px', textDecoration: 'none', display: 'block'}}>
+              <p style={{fontWeight: 600, color: '#111827', margin: '0 0 4px', fontSize: '14px'}}>{c.city}</p>
+              <p style={{fontSize: '12px', color: '#1d4ed8', margin: 0}}>{c.cost}</p>
+            </a>
+          ))}
+        </div>
+
+        {/* Related blog posts */}
+        <h3 style={{fontSize: '20px', fontWeight: 700, color: '#0f1f35', marginBottom: '16px'}}>MTP / Abortion Guides</h3>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px'}}>
+          {[
+            {title: 'MTP Act India 2021 — Your Legal Rights', slug: 'mtp-act-india-2021-womens-rights'},
+            {title: 'Abortion Without Husband Permission — Is It Legal?', slug: 'abortion-without-husband-permission-india'},
+            {title: 'Medical Abortion Pills India 2026', slug: 'medical-abortion-pills-india-2026'},
+            {title: 'MTP First vs Second Trimester — Difference', slug: 'mtp-first-trimester-vs-second-trimester'},
+            {title: 'MTP Recovery — What to Expect', slug: 'mtp-recovery-what-to-expect'},
+            {title: 'Abortion After Rape — Legal Rights India', slug: 'abortion-after-rape-india-legal-rights'},
+            {title: 'MTP for Minors in India', slug: 'mtp-abortion-for-minors-india'},
+            {title: 'Is MTP Covered by Insurance?', slug: 'mtp-insurance-coverage-india-2026'},
+            {title: 'Fertility After Abortion', slug: 'mtp-fertility-future-pregnancy-after-abortion'},
+          ].map(post => (
+            <a key={post.slug} href={'/blog/' + post.slug}
+              style={{background: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '10px', padding: '14px 16px', textDecoration: 'none', display: 'block'}}>
+              <p style={{fontSize: '14px', fontWeight: 500, color: '#1d4ed8', margin: 0, lineHeight: '1.5'}}>{post.title} →</p>
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
