@@ -66,7 +66,8 @@ const blogs = ['piles-laser-surgery-cost-gurugram-2025', 'hernia-surgery-recover
   'glp1-china-oral-pill-india-affordable-july-2026',
   'glp1-osteoarthritis-knee-joint-pain-india-july-2026',
   'glp1-sleep-apnea-kidney-heart-failure-india-july-2026',
-  'glp1-alcohol-addiction-va-trial-india-august-2026']
+  'glp1-alcohol-addiction-va-trial-india-august-2026',
+  'glp1-cancer-progression-prevention-india-august-2026']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
