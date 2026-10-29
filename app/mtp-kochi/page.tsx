@@ -168,10 +168,8 @@ export default function MTPKochiLanding() {
           {activeTab === 'surgical' ? (
             <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px'}}>
               {[
-                {weeks: 'Up to 8 weeks', method: 'MVA (Manual Vacuum Aspiration)', time: '10-15 minutes', anaesthesia: 'Local anaesthesia', recovery: 'Same day', cost: 'Rs 8,000 – Rs 18,000'},
-                {weeks: '8 to 12 weeks', method: 'Suction Evacuation / D&C', time: '15-20 minutes', anaesthesia: 'Local or sedation', recovery: 'Same day', cost: 'Rs 12,000 – Rs 22,000'},
-                {weeks: '12 to 20 weeks', method: 'Surgical + Medical combination', time: '30-60 minutes', anaesthesia: 'General/Spinal', recovery: '1-2 days', cost: 'Rs 20,000 – Rs 45,000'},
-                {weeks: '20 to 24 weeks', method: 'Late MTP (Board approval required)', time: 'Varies', anaesthesia: 'General', recovery: '2-3 days', cost: 'Rs 35,000 – Rs 80,000'},
+                {weeks: 'Up to 12 weeks', method: 'Suction Evacuation / MVA', time: '10-20 minutes', anaesthesia: 'Local anaesthesia', recovery: 'Same day', cost: 'Rs 35,000 onwards'},
+                {weeks: '12 to 20 weeks', method: 'Surgical MTP (Board approval required)', time: '30-60 minutes', anaesthesia: 'General/Spinal', recovery: '1-2 days', cost: 'Rs 50,000 onwards'},
               ].map(opt => (
                 <div key={opt.weeks} style={{background: 'white', border: '1px solid #e5e7eb', borderLeft: '4px solid #007B7F', borderRadius: '12px', padding: '18px'}}>
                   <p style={{fontWeight: 700, color: '#007B7F', fontSize: '14px', margin: '0 0 10px'}}>{opt.weeks}</p>
@@ -188,8 +186,7 @@ export default function MTPKochiLanding() {
           ) : (
             <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px'}}>
               {[
-                {weeks: 'Up to 7 weeks', method: 'Mifepristone + Misoprostol (Abortion Pills)', effectiveness: '95-97% effective', howto: 'Pill taken at clinic, second pill at home 24-48 hours later', followup: 'Scan after 2 weeks to confirm', cost: 'Rs 3,000 – Rs 8,000'},
-                {weeks: '7 to 9 weeks', method: 'Medical abortion with monitoring', effectiveness: '90-95% effective', howto: 'Pills prescribed with ultrasound monitoring', followup: 'Follow-up scan required', cost: 'Rs 5,000 – Rs 12,000'},
+                {weeks: 'Up to 5 weeks', method: 'Mifepristone + Misoprostol (Abortion Pills)', effectiveness: '95-97% effective', howto: 'Pill taken at clinic, second pill at home 24-48 hours later', followup: 'Scan after 2 weeks to confirm', cost: 'Rs 5,000 – Rs 10,000'},
               ].map(opt => (
                 <div key={opt.weeks} style={{background: 'white', border: '1px solid #e5e7eb', borderLeft: '4px solid #E91E8C', borderRadius: '12px', padding: '18px'}}>
                   <p style={{fontWeight: 700, color: '#E91E8C', fontSize: '14px', margin: '0 0 10px'}}>{opt.weeks}</p>
@@ -206,26 +203,6 @@ export default function MTPKochiLanding() {
           )}
         </div>
 
-        {/* HOSPITALS IN KOCHI */}
-        <div style={{marginBottom: '48px'}}>
-          <h2 style={{fontSize: '24px', fontWeight: 700, color: '#0f1f35', marginBottom: '20px', textAlign: 'center'}}>Our Partner Hospitals in Kochi</h2>
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px'}}>
-            {[
-              {name: 'Aster Medcity', area: 'Cheranalloor', type: 'Multi-specialty', nabh: true},
-              {name: 'Lakeshore Hospital', area: 'Maradu', type: 'Multi-specialty', nabh: true},
-              {name: 'Renai Medicity', area: 'Palarivattom', type: 'Multi-specialty', nabh: true},
-              {name: 'KIMS Hospital', area: 'Trivandrum Road', type: 'Multi-specialty', nabh: true},
-              {name: 'Ernakulam Medical Centre', area: 'Panampilly Nagar', type: "Women's Health", nabh: false},
-              {name: 'Private Gynaecology Clinics', area: 'Across Kochi', type: 'Confidential clinics', nabh: false},
-            ].map(h => (
-              <div key={h.name} style={{background: 'white', border: '1px solid #e5e7eb', borderRadius: '12px', padding: '16px'}}>
-                <p style={{fontWeight: 600, color: '#111827', fontSize: '14px', margin: '0 0 4px'}}>{h.name}</p>
-                <p style={{fontSize: '12px', color: '#6b7280', margin: '0 0 6px'}}>{h.area} · {h.type}</p>
-                {h.nabh && <span style={{fontSize: '11px', background: '#E8F8F8', color: '#007B7F', padding: '2px 8px', borderRadius: '4px', fontWeight: 600}}>NABH Accredited</span>}
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* FAQ */}
         <div style={{marginBottom: '48px'}}>
