@@ -41,10 +41,13 @@ export default function MTPPage() {
           <div style={{background: '#f0fdf4', border: '1px solid #86efac', borderRadius: '12px', padding: '14px 20px', marginBottom: '24px', display: 'inline-block'}}>
             <p style={{color: '#16a34a', fontWeight: 600, margin: 0, fontSize: '14px'}}>✓ Legal in India under MTP Act 2021 &nbsp;·&nbsp; ✓ No husband permission required &nbsp;·&nbsp; ✓ 100% Confidential</p>
           </div>
+          <div style={{display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px'}}>
+            <img src="/logo-mysurgery.png" alt="MySurgery.in" style={{height: '48px', width: 'auto'}} />
+          </div>
           <h1 style={{fontSize: '42px', fontWeight: 700, color: '#0f1f35', lineHeight: '1.2', marginBottom: '16px'}}>Safe & Legal Abortion in India</h1>
           <p style={{fontSize: '18px', color: '#4b5563', lineHeight: '1.7', marginBottom: '28px', maxWidth: '680px'}}>MySurgery connects you with registered female gynaecologists for confidential MTP across 20+ cities. Medical abortion pills up to 9 weeks. Surgical termination up to 20 weeks.</p>
           <div style={{display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '24px'}}>
-            <a href='/contact' style={{background: '#1d4ed8', color: 'white', fontWeight: 700, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Speak to a Female Doctor — Free</a>
+            <a href='/contact' style={{background: '#007B7F', color: 'white', fontWeight: 700, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Speak to a Female Doctor — Free</a>
             <a href='https://wa.me/918588967050?text=Hi+I+need+confidential+MTP+consultation' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '14px 28px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Confidentially</a>
           </div>
           <div style={{display: 'flex', gap: '24px', flexWrap: 'wrap'}}>
@@ -58,8 +61,8 @@ export default function MTPPage() {
       <div style={{maxWidth: '1000px', margin: '0 auto', padding: '48px 24px'}}>
 
         {/* LEGAL BOX */}
-        <div style={{background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '14px', padding: '24px', marginBottom: '48px'}}>
-          <h2 style={{fontSize: '20px', fontWeight: 700, color: '#1e3a8a', marginBottom: '12px'}}>Your Legal Rights Under MTP Act India 2021</h2>
+        <div style={{background: '#E8F8F8', border: '1px solid #00B5B8', borderRadius: '14px', padding: '24px', marginBottom: '48px'}}>
+          <h2 style={{fontSize: '20px', fontWeight: 700, color: '#005F62', marginBottom: '12px'}}>Your Legal Rights Under MTP Act India 2021</h2>
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '12px'}}>
             {[
               ['Up to 20 weeks', 'Any woman can terminate with one doctor approval. No reason needed.'],
@@ -68,7 +71,7 @@ export default function MTPPage() {
               ['Registered doctors', 'Procedure must be performed by a registered medical practitioner at an approved facility.'],
             ].map(([title, desc]) => (
               <div key={title} style={{background: 'white', borderRadius: '8px', padding: '14px'}}>
-                <p style={{fontWeight: 700, color: '#1d4ed8', fontSize: '14px', margin: '0 0 6px'}}>{title}</p>
+                <p style={{fontWeight: 700, color: '#007B7F', fontSize: '14px', margin: '0 0 6px'}}>{title}</p>
                 <p style={{fontSize: '13px', color: '#374151', margin: 0, lineHeight: '1.6'}}>{desc}</p>
               </div>
             ))}
@@ -90,20 +93,20 @@ export default function MTPPage() {
                   <div>
                     <span style={{fontSize: '28px'}}>{option.icon}</span>
                     <h3 style={{fontSize: '18px', fontWeight: 700, color: '#111827', margin: '8px 0 4px'}}>{option.title}</h3>
-                    <span style={{fontSize: '12px', background: '#1d4ed8', color: 'white', padding: '3px 8px', borderRadius: '4px', fontWeight: 500}}>{option.weeks}</span>
+                    <span style={{fontSize: '12px', background: '#007B7F', color: 'white', padding: '3px 8px', borderRadius: '4px', fontWeight: 500}}>{option.weeks}</span>
                   </div>
                 </div>
                 <div style={{marginBottom: '14px'}}>
                   <p style={{fontSize: '13px', fontWeight: 600, color: '#374151', marginBottom: '8px'}}>What happens:</p>
                   {option.steps.map((step, i) => (
                     <div key={i} style={{display: 'flex', gap: '8px', alignItems: 'flex-start', marginBottom: '4px'}}>
-                      <span style={{fontSize: '11px', background: '#1d4ed8', color: 'white', borderRadius: '50%', width: '18px', height: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '1px'}}>{i+1}</span>
+                      <span style={{fontSize: '11px', background: '#007B7F', color: 'white', borderRadius: '50%', width: '18px', height: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '1px'}}>{i+1}</span>
                       <span style={{fontSize: '13px', color: '#374151', lineHeight: '1.5'}}>{step}</span>
                     </div>
                   ))}
                 </div>
                 <div style={{borderTop: '1px solid rgba(0,0,0,0.08)', paddingTop: '12px'}}>
-                  <p style={{fontSize: '15px', fontWeight: 700, color: '#1d4ed8', margin: '0 0 4px'}}>{option.cost}</p>
+                  <p style={{fontSize: '15px', fontWeight: 700, color: '#007B7F', margin: '0 0 4px'}}>{option.cost}</p>
                   <p style={{fontSize: '12px', color: '#6b7280', margin: 0}}>approximate cost across India</p>
                 </div>
               </div>
@@ -136,7 +139,7 @@ export default function MTPPage() {
           <div style={{overflowX: 'auto'}}>
             <table style={{width: '100%', borderCollapse: 'collapse', fontSize: '14px'}}>
               <thead>
-                <tr style={{background: '#1d4ed8', color: 'white'}}>
+                <tr style={{background: '#007B7F', color: 'white'}}>
                   {['City', 'Medical Abortion (Pills)', 'Surgical S&E', 'D&C'].map(h => (
                     <th key={h} style={{padding: '12px 16px', textAlign: 'left', fontWeight: 600}}>{h}</th>
                   ))}
@@ -187,7 +190,7 @@ export default function MTPPage() {
           <h2 style={{fontSize: '28px', fontWeight: 700, color: 'white', marginBottom: '12px'}}>You Are Not Alone</h2>
           <p style={{color: '#93c5fd', marginBottom: '32px', fontSize: '16px', maxWidth: '500px', margin: '0 auto 32px'}}>Speak to a female doctor today. Free, confidential, and non-judgmental. We are here to help you make the right decision for you.</p>
           <div style={{display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap'}}>
-            <a href='/contact' style={{background: 'white', color: '#1d4ed8', fontWeight: 700, padding: '15px 32px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Speak to a Female Doctor — Free</a>
+            <a href='/contact' style={{background: 'white', color: '#007B7F', fontWeight: 700, padding: '15px 32px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>Speak to a Female Doctor — Free</a>
             <a href='https://wa.me/918588967050?text=Hi+I+need+confidential+MTP+consultation' target='_blank' rel='noopener noreferrer' style={{background: '#22c55e', color: 'white', fontWeight: 600, padding: '15px 32px', borderRadius: '10px', textDecoration: 'none', fontSize: '15px'}}>WhatsApp Confidentially</a>
           </div>
           <p style={{color: '#64748b', fontSize: '13px', marginTop: '20px'}}>Available 9am – 9pm · All calls confidential · Female doctors available</p>
@@ -225,7 +228,7 @@ export default function MTPPage() {
             <a key={c.slug} href={'/treatment/mtp-abortion/' + c.slug}
               style={{background: 'white', border: '1px solid #e5e7eb', borderRadius: '12px', padding: '14px 16px', textDecoration: 'none', display: 'block'}}>
               <p style={{fontWeight: 600, color: '#111827', margin: '0 0 4px', fontSize: '14px'}}>{c.city}</p>
-              <p style={{fontSize: '12px', color: '#1d4ed8', margin: 0}}>{c.cost}</p>
+              <p style={{fontSize: '12px', color: '#007B7F', margin: 0}}>{c.cost}</p>
             </a>
           ))}
         </div>
@@ -246,7 +249,7 @@ export default function MTPPage() {
           ].map(post => (
             <a key={post.slug} href={'/blog/' + post.slug}
               style={{background: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: '10px', padding: '14px 16px', textDecoration: 'none', display: 'block'}}>
-              <p style={{fontSize: '14px', fontWeight: 500, color: '#1d4ed8', margin: 0, lineHeight: '1.5'}}>{post.title} →</p>
+              <p style={{fontSize: '14px', fontWeight: 500, color: '#007B7F', margin: 0, lineHeight: '1.5'}}>{post.title} →</p>
             </a>
           ))}
         </div>

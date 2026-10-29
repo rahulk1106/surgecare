@@ -29,7 +29,7 @@ export default function Navbar() {
       <div style={{maxWidth:'1200px',margin:'0 auto',padding:'0 20px',display:'flex',alignItems:'center',height:'64px',gap:'12px'}}>
         <Link href='/' style={{display:'flex',alignItems:'center',gap:'8px',textDecoration:'none',flexShrink:0}}>
           <div style={{width:'34px',height:'34px',background:'#1d4ed8',borderRadius:'8px',display:'flex',alignItems:'center',justifyContent:'center',color:'white',fontWeight:700,fontSize:'16px'}}>M</div>
-          <span style={{fontWeight:700,color:'#0f1f35',fontSize:'20px'}}>MySurgery</span>
+          <img src="/logo-mysurgery.png" alt="MySurgery.in" style={{height:'36px',width:'auto'}} />
         </Link>
         <div className='ms-desktop' style={{flex:1,maxWidth:'380px',display:'flex',alignItems:'center',background:'#f3f4f6',borderRadius:'10px',padding:'9px 14px',gap:'8px',marginLeft:'8px'}}>
           <svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='#9ca3af' strokeWidth='2'><circle cx='11' cy='11' r='8'/><path d='m21 21-4.35-4.35'/></svg>
